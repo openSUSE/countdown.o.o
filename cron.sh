@@ -1,7 +1,7 @@
 #!/bin/bash
 REMOTE_HOST="counter.o.o"
-BASEDIR="$HOME/countdown.o.o/svg"
-LOCAL="$HOME/countdown.o.o/output"
+BASEDIR="/home/counter.opensuse.org/svg"
+LOCAL="/home/counter.opensuse.org/output"
 REMOTE="counter.o.o:/srv/www/vhosts/0b965c33b89fac9ea53708de378f93dcda084d34/opensuse.org/counter/htdocs"
 
 set -e
