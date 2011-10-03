@@ -18,29 +18,8 @@ import tempfile
 import shutil
 import atexit
 
-# 11.0:
-# VERSION = "11.0"
-# RELEASE = datetime.datetime(2008, 6, 19, 15, 0, 0)
-
-# 11.1:
-# VERSION = "11.1"
-# RELEASE = datetime.datetime(2008, 12, 18, 15, 0, 0)
-
-# 11.2:
-# VERSION = "11.2"
-# RELEASE = datetime.datetime(2009, 11, 12, 15, 0, 0)
-
-# 11.3:
-#VERSION = "11.3"
-#RELEASE = datetime.datetime(2010, 7, 15, 14, 0, 0)
-
-# 11.4:
-#VERSION = "11.4"
-#RELEASE = datetime.datetime(2011, 3, 10, 14, 0, 0)
-
-# 12.1:
 VERSION = "12.1"
-RELEASE = datetime.datetime(2011, 11, 11, 14, 0, 0)
+RELEASE = datetime.datetime(2011, 11, 16, 14, 0, 0)
 
 ###--- no need to change below this line ---###
 
