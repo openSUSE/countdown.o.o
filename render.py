@@ -35,8 +35,12 @@ import atexit
 #RELEASE = datetime.datetime(2010, 7, 15, 14, 0, 0)
 
 # 11.4:
-VERSION = "11.4"
-RELEASE = datetime.datetime(2011, 3, 10, 14, 0, 0)
+#VERSION = "11.4"
+#RELEASE = datetime.datetime(2011, 3, 10, 14, 0, 0)
+
+# 12.1:
+VERSION = "12.1"
+RELEASE = datetime.datetime(2011, 11, 11, 14, 0, 0)
 
 ###--- no need to change below this line ---###
 
