@@ -22,12 +22,12 @@ RFLAGS=""
 [ -n "$VERBOSE" ] && RFLAGS="$RFLAGS -v"
 
 cd "$BASEDIR"
-mkdir -p "$LOCAL"/11.4
+mkdir -p "$LOCAL"/12.1
 if [ -n "$RENDER" ]; then
-    ./render.py $RFLAGS "$LOCAL"/11.4 || exit 1
+    ./render.py $RFLAGS "$LOCAL"/12.1 || exit 1
 
     /bin/rm -f "$LOCAL"/*.png
-    /bin/cp -a "$LOCAL"/11.4/*.png "$LOCAL"/
+    /bin/cp -a "$LOCAL"/12.1/*.png "$LOCAL"/
 
     pushd "$LOCAL" >/dev/null
     find . -type f -name '*.png' | while read png; do
