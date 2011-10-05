@@ -31,7 +31,7 @@ if [ -n "$RENDER" ]; then
 
     pushd "$LOCAL" >/dev/null
     find . -type f -name '*.png' | while read png; do
-        optipng "$png" >/dev/null
+        optipng "$png" &>/dev/null
     done
     popd >/dev/null
 fi
