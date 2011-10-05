@@ -21,11 +21,14 @@ import atexit
 VERSION = "12.1"
 RELEASE = datetime.datetime(2011, 11, 16, 14, 0, 0)
 
+VARIANTS = ["label"]
+
 ###--- no need to change below this line ---###
 
 PREFIX = "opensuse-%s" % VERSION
 # dimensions are tuples of (width,height,name)
 sizes = [(600,100,"wide"), (400,400,"large"), (256,256,"medium"), (130,130,"small")]
+varlist = [""] + ["-%s" % (x) for x in VARIANTS]
 
 options = None
 optionParser = OptionParser(usage="%prog [options] [<output directory>]",
@@ -209,42 +212,62 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
         if not (size[2] in options.sizes):
             continue
 
-        if template_variant == None:
-            template = "%s-%dx%d.svg" % (PREFIX, size[0], size[1])
+        if y != None and len(y) > 0:
+            t = "-top"
         else:
-            template = "%s-%dx%d-%s.svg" % (PREFIX, size[0], size[1], template_variant)
+            t = None
             pass
 
-        outfile = "%s/%s.%s.png" % (prefix, size[2], lang)
-
-        if options.verbose:
-            print "%s / %s: %s -> %s" % (lang, size[2], template, outfile)
-            pass
-
-        workfile = os.path.join(workdir, "work.svg")
-        out = open(workfile, "wb")
-        for line in fileinput.FileInput(template, mode="rb"):
-            line = unicode(line)
-            line = line.replace(u"@@", x).replace(u"@TOPC@", y).replace(u"@TOP@", yy).replace(u"@BOTTOM@", z).replace(u"@BOTTOMC@", zz)
-            line = line.replace(u"@_TOP_@", ly).replace(u"@_BOTTOM_@", lz)
-            if font_repl != None:
-                line = line.replace(font_to_replace, unicode(font_repl))
+        for var in varlist:
+            if template_variant == None:
+                if t != None:
+                    template = "%s-%dx%d%s%s.svg" % (PREFIX, size[0], size[1], var, t)
+                if t == None or not os.path.exists(template):
+                    template = "%s-%dx%d%s.svg" % (PREFIX, size[0], size[1], var)
+            else:
+                if t != None:
+                    template = "%s-%dx%d%s%s-%s.svg" % (PREFIX, size[0], size[1], var, t, template_variant)
+                if t == None or not os.path.exists(template):
+                    template = "%s-%dx%d%s-%s.svg" % (PREFIX, size[0], size[1], var, template_variant)
                 pass
-            out.write(line)
+
+            if not os.path.exists(template):
+                if options.verbose:
+                    print "skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template)
+                    pass
+                continue
+
+            outfile = "%s/%s%s-%s.%s.png" % (prefix, PREFIX, var, size[2], lang)
+
+            if options.verbose:
+                print "%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile)
+                pass
+
+            workfile = os.path.join(workdir, "work.svg")
+            out = open(workfile, "wb")
+            for line in fileinput.FileInput(template, mode="rb"):
+                line = unicode(line)
+                line = line.replace(u"@@", x).replace(u"@TOPC@", y).replace(u"@TOP@", yy).replace(u"@BOTTOM@", z).replace(u"@BOTTOMC@", zz)
+                line = line.replace(u"@_TOP_@", ly).replace(u"@_BOTTOM_@", lz)
+                if font_repl != None:
+                    line = line.replace(font_to_replace, unicode(font_repl))
+                    pass
+                out.write(line)
+                pass
+            out.close()
+
+            #rc = subprocess.call(["rsvg-convert", "-w", str(size[0]), "-h", str(size[1]), "-f", "png", "-o", outfile, workfile])
+
+            rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
+            if options.keep:
+                svg_outfile = "%s/%s%s.%s.svg" % (prefix, PREFIX, var, size[2], lang)
+                shutil.copyfile(workfile, svg_outfile)
+                print "SVG saved as %s" % svg_outfile
+                pass
+
+            if rc != 0:
+                print >>sys.stderr, "ERROR: call to inkscape failed for %s" % workfile
             pass
-        out.close()
-
-        #rc = subprocess.call(["rsvg-convert", "-w", str(size[0]), "-h", str(size[1]), "-f", "png", "-o", outfile, workfile])
-
-        rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
-        if options.keep:
-            svg_outfile = "%s/%s.%s.svg" % (prefix, size[2], lang)
-            shutil.copyfile(workfile, svg_outfile)
-            print "SVG saved as %s" % svg_outfile
-            pass
-
-        if rc != 0:
-            print >>sys.stderr, "ERROR: call to inkscape failed for %s" % workfile
         pass
     pass
 
@@ -258,7 +281,7 @@ def render_outnow(lang, top, bottom):
         pass
 
     for size in sizes:
-        template = "%s-%dx%d-outnow.svg" % (PREFIX, size[0], size[1])
+        template = "%s/%s-%dx%d-outnow.svg" % (prefix, PREFIX, size[0], size[1])
 
         workfile = os.path.join(workdir, "work.svg")
         out = open(workfile, "wb")
@@ -273,12 +296,14 @@ def render_outnow(lang, top, bottom):
             sys.stdout.flush()
             pass
 
-        outfile = "%s/%s.%s.png" % (prefix, size[2], lang)
+        outfile = "%s/%s%s.%s.png" % (prefix, PREFIX, var, size[2], lang)
         rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
         if options.keep:
-            svg_outfile = "%s/%s.%s.svg" % (prefix, size[2], lang)
+            svg_outfile = "%s/%s%s.%s.svg" % (prefix, PREFIX, var, size[2], lang)
             shutil.copyfile(workfile, svg_outfile)
-            print "SVG saved as %s" % svg_outfile
+            if options.verbose:
+                print "SVG saved as %s" % svg_outfile
+                pass
             pass
 
         if rc != 0:
@@ -386,9 +411,5 @@ else:
 
         render(lang, lang, pre0, pre, text, post, post2)
         pass
-    pass
-
-if os.path.exists("/tmp/work.svg"):
-    os.remove("/tmp/work.svg")
     pass
 
