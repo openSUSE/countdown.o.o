@@ -37,6 +37,7 @@ optionParser.add_option('-v', '--verbose', action='store_true', dest='verbose', 
 optionParser.add_option('-l', '--lang', action='append', dest='lang', default=[], help='language to render')
 optionParser.add_option('-k', '--keep', action='store_true', dest='keep', default=False, help='keep SVG files')
 optionParser.add_option('-s', '--size', action='append', dest='sizes', default=[], help='sizes to render')
+optionParser.add_option('-d', '--days', dest='forced_days', default=None, help='force the amount of remaining days', metavar='DAYS')
 (options, args) = optionParser.parse_args(sys.argv)
 
 if len(options.sizes) == 0:
@@ -168,9 +169,12 @@ else:
     languages = list(set(m.keys() + avail.keys()))
     pass
 
-diff = (RELEASE - datetime.datetime.now())
-days = diff.days
-color = (255, 255, 255, 255)
+if options.forced_days != None:
+    days = options.forced_days
+else:
+    diff = (RELEASE - datetime.datetime.now())
+    days = diff.days
+    pass
 
 workdir = None
 
