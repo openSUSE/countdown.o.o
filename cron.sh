@@ -36,7 +36,7 @@ if [ -n "$RENDER" ]; then
     # workaround, remove once darix has updated the rewrite config:
     mkdir -p "$LOCAL/12.1"
     /bin/rm -f "$LOCAL/12.1"/*.png
-    /bin/cp -a *.png "$LOCAL/12.1/"
+    /bin/cp -a "$LOCAL"/*.png "$LOCAL/12.1/"
 fi
 
 if [ -n "$REMOTE" ]; then
