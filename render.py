@@ -158,9 +158,9 @@ font_to_replace = u'DejaVu Sans'
 default_font = 'FifthLeg'
 
 if len(args) >= 2:
-    prefix = args[1]
+    outdir = args[1]
 else:
-    prefix = "../output/%s" % VERSION
+    outdir = "../output/%s" % VERSION
     pass
 
 if len(options.lang) > 0:
@@ -241,7 +241,7 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                     pass
                 continue
 
-            outfile = "%s/%s%s-%s.%s.png" % (prefix, PREFIX, var, size[2], lang)
+            outfile = "%s/%s%s.%s.png" % (outdir, size[2], var, lang)
 
             if options.verbose:
                 print "%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile)
@@ -264,7 +264,7 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
 
             rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
             if options.keep:
-                svg_outfile = "%s/%s%s.%s.svg" % (prefix, PREFIX, var, size[2], lang)
+                svg_outfile = "%s/%s%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
                 shutil.copyfile(workfile, svg_outfile)
                 print "SVG saved as %s" % svg_outfile
                 pass
@@ -285,7 +285,7 @@ def render_outnow(lang, top, bottom):
         pass
 
     for size in sizes:
-        template = "%s/%s-%dx%d-outnow.svg" % (prefix, PREFIX, size[0], size[1])
+        template = "%s/%s-%dx%d-outnow.svg" % (outdir, PREFIX, size[0], size[1])
 
         workfile = os.path.join(workdir, "work.svg")
         out = open(workfile, "wb")
@@ -300,10 +300,10 @@ def render_outnow(lang, top, bottom):
             sys.stdout.flush()
             pass
 
-        outfile = "%s/%s%s.%s.png" % (prefix, PREFIX, var, size[2], lang)
+        outfile = "%s/%s%s.%s.png" % (outdir, size[2], var, lang)
         rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
         if options.keep:
-            svg_outfile = "%s/%s%s.%s.svg" % (prefix, PREFIX, var, size[2], lang)
+            svg_outfile = "%s/%s%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
             shutil.copyfile(workfile, svg_outfile)
             if options.verbose:
                 print "SVG saved as %s" % svg_outfile
@@ -322,6 +322,10 @@ def render_outnow(lang, top, bottom):
 
 if options.verbose:
     print "days: %d" % (days)
+    pass
+
+if not os.path.exists(outdir):
+    os.makedirs(outdir)
     pass
 
 if days == 0 and diff.seconds > 0:

@@ -22,23 +22,26 @@ RFLAGS=""
 [ -n "$VERBOSE" ] && RFLAGS="$RFLAGS -v"
 
 cd "$BASEDIR"
-mkdir -p "$LOCAL"/12.1
+mkdir -p "$LOCAL"
 if [ -n "$RENDER" ]; then
-    ./render.py $RFLAGS "$LOCAL"/12.1 || exit 1
-
     /bin/rm -f "$LOCAL"/*.png
-    /bin/cp -a "$LOCAL"/12.1/*.png "$LOCAL"/
-
+    ./render.py $RFLAGS "$LOCAL"/ || exit 1
     pushd "$LOCAL" >/dev/null
-    find . -type f -name '*.png' | while read png; do
+    find . -type f -maxdepth 1 -name '*.png' | while read png; do
+	[ -n "$VERBOSE" ] && echo "optipng $png"
         optipng "$png" &>/dev/null
     done
     popd >/dev/null
+
+    # workaround, remove once darix has updated the rewrite config:
+    mkdir -p "$LOCAL/12.1"
+    /bin/rm -f "$LOCAL/12.1"/*.png
+    /bin/cp -a *.png "$LOCAL/12.1/"
 fi
 
 if [ -n "$REMOTE" ]; then
     RSFLAGS=""
     [ -n "$VERBOSE" ] && RSFLAGS="$RSFLAGS -v"
-    rsync -ap $RSFLAGS "$LOCAL/" "$REMOTE/"
+    rsync -ap --delete-after $RSFLAGS "$LOCAL/" "$REMOTE/"
 fi
 
