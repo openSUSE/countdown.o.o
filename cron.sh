@@ -32,11 +32,6 @@ if [ -n "$RENDER" ]; then
         optipng "$png" &>/dev/null
     done
     popd >/dev/null
-
-    # workaround, remove once darix has updated the rewrite config:
-    mkdir -p "$LOCAL/12.1"
-    /bin/rm -f "$LOCAL/12.1"/*.png
-    /bin/cp -a "$LOCAL"/*.png "$LOCAL/12.1/"
 fi
 
 if [ -n "$REMOTE" ]; then
