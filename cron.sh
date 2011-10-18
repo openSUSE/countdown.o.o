@@ -27,7 +27,7 @@ if [ -n "$RENDER" ]; then
     /bin/rm -f "$LOCAL"/*.png
     ./render.py $RFLAGS "$LOCAL"/ || exit 1
     pushd "$LOCAL" >/dev/null
-    find . -type f -maxdepth 1 -name '*.png' | while read png; do
+    find . -maxdepth 1 -type f -name '*.png' | while read png; do
 	[ -n "$VERBOSE" ] && echo "optipng $png"
         optipng "$png" &>/dev/null
     done
