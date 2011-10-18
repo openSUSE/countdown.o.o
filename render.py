@@ -102,6 +102,7 @@ avail = {
         'gl': u'Xa está\ndispoñible!',
         'ge': u'არსებული',
         'lt': u'Išleista!',
+        'tk': u'Çıktı',
         }
 
 almost = {
@@ -112,6 +113,7 @@ almost = {
         'da': [u'Udgives om', [u'timer!', u'time!']],
         'es': [u'Disponible en', [u'horas!', u'hora!']],
         'lt': [u'Pasirodys po', [u'val.', u'val.']],
+        'tk': ['', [u'saat sonra karşınızda!', u'saat sonra karşınızda!']],
 }
 
 m = {
@@ -143,6 +145,7 @@ m = {
         'tw': [u'倒數', u'天'],
         'gl': [u'Dispoñible en', u'días', u'Dispoñible en', u'día'],
         'lt': msg_lt,
+        'tr': ['', u'gün kaldı'],
         }
 
 font_override = {
