@@ -146,7 +146,14 @@ m = {
         'gl': [u'Dispoñible en', u'días', u'Dispoñible en', u'día'],
         'lt': msg_lt,
         'tr': ['', u'gün kaldı'],
+}
+
+extra = {
+        'tr': {
+            u'Linux for open minds': u'Açık fikirliler için linux',
+            u'92.515228': u'66',
         }
+}
 
 font_override = {
         'cn': 'Droid Sans Fallback',
@@ -256,6 +263,13 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 line = unicode(line)
                 line = line.replace(u"@@", x).replace(u"@TOPC@", y).replace(u"@TOP@", yy).replace(u"@BOTTOM@", z).replace(u"@BOTTOMC@", zz)
                 line = line.replace(u"@_TOP_@", ly).replace(u"@_BOTTOM_@", lz)
+
+                if lang in extra:
+                    for s, r in extra[lang].iteritems():
+                        line = line.replace(s, unicode(r).encode('ascii', 'xmlcharrefreplace'))
+                        pass
+                    pass
+
                 if font_repl != None:
                     line = line.replace(font_to_replace, unicode(font_repl))
                     pass
