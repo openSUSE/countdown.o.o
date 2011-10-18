@@ -32,6 +32,11 @@ if [ -n "$RENDER" ]; then
         optipng "$png" &>/dev/null
     done
     popd >/dev/null
+
+    for f in *.html *.css *.js; do
+        [ -e "$f" ] || continue
+        cp -a "$f" "$LOCAL/"
+    done
 fi
 
 if [ -n "$REMOTE" ]; then
