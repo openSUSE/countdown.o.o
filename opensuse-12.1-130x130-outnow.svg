@@ -668,10 +668,10 @@
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1143"
-     inkscape:window-x="0"
-     inkscape:window-y="26"
+     inkscape:window-width="1280"
+     inkscape:window-height="1004"
+     inkscape:window-x="1276"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata3225">
@@ -752,35 +752,24 @@
          x="64.989876"
          id="tspan2393"
          sodipodi:role="line">@TOP@</tspan></text>
-    <g
-       transform="matrix(0.40349591,0,0,0.40349591,15.57243,797.9273)"
-       id="g3543"
-       style="filter:url(#filter4751)">
-      <text
-         xml:space="preserve"
-         style="font-size:32.11002731px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
-         x="-24.776829"
-         y="392.65756"
-         id="text5980"
-         sodipodi:linespacing="125%"><tspan
-           y="392.65756"
-           x="-24.776829"
-           id="tspan5984"
-           sodipodi:role="line">Linux for open minds</tspan></text>
-    </g>
+    <rect
+       style="opacity:0.5;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5066"
+       width="131.21342"
+       height="26.856472"
+       x="-0.19933462"
+       y="921.55426" />
     <text
-       sodipodi:linespacing="125%"
-       id="text5922"
-       y="718.18225"
-       x="6.7856574"
-       style="font-size:47.04607773px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient4442);fill-opacity:1;stroke:none;filter:url(#filter4737);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
        xml:space="preserve"
-       transform="matrix(0.46098889,0,0,0.43683953,-2.1186681,627.44136)"><tspan
-         style="font-size:46.79647064px;fill:url(#linearGradient4442);fill-opacity:1"
-         dx="0 0 0 0 0 0 0 0 0 0 0 0"
-         y="718.18225"
-         x="6.7856574"
-         id="tspan5924"
-         sodipodi:role="line">openSUSE 12.1</tspan></text>
+       style="font-size:17.7895813px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Droid Sans Mono;-inkscape-font-specification:Droid Sans Mono"
+       x="11.739739"
+       y="940.5072"
+       id="text5060"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5062"
+         x="11.739739"
+         y="940.5072"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:0.14978956px;fill:#ffffff;fill-opacity:1;font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold">openSUSE 12.1</tspan></text>
   </g>
 </svg>
