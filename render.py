@@ -18,8 +18,8 @@ import tempfile
 import shutil
 import atexit
 
-VERSION = "12.1"
-RELEASE = datetime.datetime(2011, 11, 16, 14, 0, 0)
+VERSION = "12.2"
+RELEASE = datetime.datetime(2012, 9, 5, 14, 0, 0)
 
 VARIANTS = ["label"]
 
@@ -208,6 +208,14 @@ def sjoin(a, sep, b):
     r += b
     return r
 
+def call_render(workfile, outfile, width, height):
+    # can't use rsvg as the black outline around placeholers is
+    # stored in a way only inkscape can process
+    #rc = subprocess.call(["rsvg-convert", "-w", str(width), "-h", str(height), "-f", "png", "-o", outfile, workfile])
+    rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(width), "-h", str(height), workfile], stdout=dev_null)
+    return rc
+
+
 def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_variant=None):
     x = unicode(center).encode('ascii', 'xmlcharrefreplace')
     y = unicode(top1).encode('ascii', 'xmlcharrefreplace')
@@ -265,6 +273,7 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 line = unicode(line)
                 line = line.replace(u"@@", x).replace(u"@TOPC@", y).replace(u"@TOP@", yy).replace(u"@BOTTOM@", z).replace(u"@BOTTOMC@", zz)
                 line = line.replace(u"@_TOP_@", ly).replace(u"@_BOTTOM_@", lz)
+                line = line.replace(u"##.#", VERSION)
 
                 if lang in extra:
                     for s, r in extra[lang].iteritems():
@@ -279,11 +288,9 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 pass
             out.close()
 
-            #rc = subprocess.call(["rsvg-convert", "-w", str(size[0]), "-h", str(size[1]), "-f", "png", "-o", outfile, workfile])
-
-            rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
+	    rc = call_render(workfile, outfile, size[0], size[1])
             if options.keep:
-                svg_outfile = "%s/%s%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
+                svg_outfile = "%s/%s%s.%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
                 shutil.copyfile(workfile, svg_outfile)
                 if options.verbose:
                     print "SVG saved as %s" % svg_outfile
@@ -351,6 +358,7 @@ def render_outnow(lang, truelang, top, bottom, template_variant=None):
             out = open(workfile, "wb")
             for line in fileinput.FileInput(template, mode="rb"):
                 line = unicode(line).replace(u"@TOP@", y).replace(u"@BOTTOM@", z)
+                line = line.replace(u"##.#", VERSION)
                 if lang in extra:
                     for s, r in extra[lang].iteritems():
                         line = line.replace(s, unicode(r).encode('ascii', 'xmlcharrefreplace'))
@@ -363,9 +371,9 @@ def render_outnow(lang, truelang, top, bottom, template_variant=None):
                 pass
             out.close()
 
-            rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(size[0]), "-h", str(size[1]), workfile], stdout=dev_null)
+	    rc = call_render(workfile, outfile, size[0], size[1])
             if options.keep:
-                svg_outfile = "%s/%s%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
+                svg_outfile = "%s/%s%s.%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
                 shutil.copyfile(workfile, svg_outfile)
                 if options.verbose:
                     print "SVG saved as %s" % svg_outfile
