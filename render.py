@@ -151,7 +151,6 @@ m = {
 extra = {
         'tr': {
             u'Linux for open minds': u'Açık fikirliler için linux',
-            u'92.515228': u'66',
         }
 }
 
