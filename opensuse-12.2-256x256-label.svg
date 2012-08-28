@@ -15,8 +15,8 @@
    height="256"
    id="svg6928"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="opensuse-12.2-256x256-label.svg">
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="opensuse-12.1-256x256-top.svg">
   <defs
      id="defs6930">
     <clipPath
@@ -625,17 +625,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="162.0718"
+     inkscape:cx="161.0718"
      inkscape:cy="81.145109"
      inkscape:document-units="px"
-     inkscape:current-layer="g3543"
+     inkscape:current-layer="layer1"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1612"
-     inkscape:window-height="1018"
-     inkscape:window-x="1"
-     inkscape:window-y="0"
+     inkscape:window-width="1280"
+     inkscape:window-height="1004"
+     inkscape:window-x="-4"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata6933">
@@ -800,7 +800,7 @@
            xml:space="preserve"><tspan
              sodipodi:role="line"
              id="tspan5984"
-             x="92.515228"
+             x="383.01965"
              y="392.65756"
              style="text-anchor:end;text-align:end">Linux for open minds</tspan></text>
       </g>
