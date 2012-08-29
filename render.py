@@ -93,8 +93,8 @@ avail = {
         'hu': u'Megjelent',
         'ro': u'Disponibil\nacum!',
         'si': u'Zunaj\nZdaj!',
-        'cn': u'立即下载',
-        'tw': u'立即下載',
+        'cn': u'盛装发布！',
+        'tw': u'盛裝發佈！',
         'id': u'Download\nsekarang',
         'bg': u'довнлоад\nсега!',
         'ja': u'好評\n提供中！',
@@ -107,6 +107,8 @@ avail = {
 
 almost = {
         'en': [u'Release in', [u'hours!', u'hour!']],
+	'cn': [u'即刻登场', [u'小时！', u'小时！']],
+        'tw': [u'即刻登場', [u'小時！', u'小時！']],
         'fr': [u'Plus que', [u'heures!', u'heure!']],
         'de': [u'Verfügbar in', [u'Stunden!', u'Stunde!']],
         'it': [u'Disponibile in', [u'ore!', u'ora!']],
@@ -142,6 +144,7 @@ m = {
         'bg': [u'още', u'дин', u'още', u'ден'],
         'ja': [u'いよいよ登場！\nあと', u'日'],
         'wa': [u'Co', u'djoûs a\nratinde', u'Co', u'djoû a ratinde'],
+	'cn': [u'倒数', u'天'],
         'tw': [u'倒數', u'天'],
         'gl': [u'Dispoñible en', u'días', u'Dispoñible en', u'día'],
         'lt': msg_lt,
