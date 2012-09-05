@@ -305,89 +305,6 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
         pass
     pass
 
-def render_outnow(lang, truelang, top, bottom, template_variant=None):
-    y = unicode(top).encode('ascii', 'xmlcharrefreplace')
-    z = unicode(bottom).encode('ascii', 'xmlcharrefreplace')
-
-    if options.verbose:
-        sys.stdout.write("%s:" % lang)
-        sys.stdout.flush()
-        pass
-    
-    font_repl = None
-    if truelang in font_override:
-        font_repl = font_override[truelang]
-    else:
-        font_repl = default_font
-        pass
-
-    for size in sizes:
-        if not (size[2] in options.sizes):
-            continue
-
-        if y != None and len(y) > 0:
-            t = "-top"
-        else:
-            t = None
-            pass
-
-        for var in varlist:
-            if template_variant == None:
-                if t != None:
-                    template = "%s-%dx%d-outnow%s%s.svg" % (PREFIX, size[0], size[1], var, t)
-                if t == None or not os.path.exists(template):
-                    template = "%s-%dx%d-outnow%s.svg" % (PREFIX, size[0], size[1], var)
-            else:
-                if t != None:
-                    template = "%s-%dx%d-outnow%s%s-%s.svg" % (PREFIX, size[0], size[1], var, t, template_variant)
-                if t == None or not os.path.exists(template):
-                    template = "%s-%dx%d-outnow%s-%s.svg" % (PREFIX, size[0], size[1], var, template_variant)
-                pass
-
-            if not os.path.exists(template):
-                if options.verbose:
-                    print "skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template)
-                    pass
-                continue
-
-            outfile = "%s/%s%s.%s.png" % (outdir, size[2], var, lang)
-
-            if options.verbose:
-                print "%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile)
-                pass
-
-            workfile = os.path.join(workdir, "work.svg")
-            out = open(workfile, "wb")
-            for line in fileinput.FileInput(template, mode="rb"):
-                line = unicode(line).replace(u"@TOP@", y).replace(u"@BOTTOM@", z)
-                line = line.replace(u"##.#", VERSION)
-                if lang in extra:
-                    for s, r in extra[lang].iteritems():
-                        line = line.replace(s, unicode(r).encode('ascii', 'xmlcharrefreplace'))
-                        pass
-                    pass
-                if font_repl != None:
-                    line = line.replace(font_to_replace, unicode(font_repl))
-                    pass
-                out.write(line)
-                pass
-            out.close()
-
-	    rc = call_render(workfile, outfile, size[0], size[1])
-            if options.keep:
-                svg_outfile = "%s/%s%s.%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
-                shutil.copyfile(workfile, svg_outfile)
-                if options.verbose:
-                    print "SVG saved as %s" % svg_outfile
-                    pass
-                pass
-
-            if rc != 0:
-                print >>sys.stderr, "ERROR: call to inkscape failed for %s" % workfile
-            pass
-        pass
-    pass
-
 if options.verbose:
     print "days: %d" % (days)
     pass
@@ -441,9 +358,9 @@ elif days <= 0:
 
         parts = text.split("\n")
         if len(parts) == 1:
-            render_outnow(lang, truelang, parts[0], "")
+            render(lang, truelang, None, parts[0], None, "", None, "outnow")
         else:
-            render_outnow(lang, truelang, parts[0], parts[1])
+            render(lang, truelang, None, parts[0], None, parts[1], None, "outnow")
             pass
         pass
     pass
