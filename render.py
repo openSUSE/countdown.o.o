@@ -416,7 +416,7 @@ if days == 0 and seconds > 0:
             post = m[1][1]
             pass
 
-        render(lang, truelang, "", top, text, post, post2, "almost")
+        render(lang, truelang, "", top, text, post, post2)
         pass
     pass
 
