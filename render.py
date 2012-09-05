@@ -102,12 +102,12 @@ avail = {
         'gl': u'Xa está\ndispoñible!',
         'ge': u'არსებული',
         'lt': u'Išleista!',
-        'tk': u'Çıktı',
+        'tr': u'Çıktı!',
         }
 
 almost = {
         'en': [u'Release in', [u'hours!', u'hour!']],
-	'cn': [u'即刻登场', [u'小时！', u'小时！']],
+        'cn': [u'即刻登场', [u'小时！', u'小时！']],
         'tw': [u'即刻登場', [u'小時！', u'小時！']],
         'fr': [u'Plus que', [u'heures!', u'heure!']],
         'de': [u'Verfügbar in', [u'Stunden!', u'Stunde!']],
@@ -115,7 +115,7 @@ almost = {
         'da': [u'Udgives om', [u'timer!', u'time!']],
         'es': [u'Disponible en', [u'horas!', u'hora!']],
         'lt': [u'Pasirodys po', [u'val.', u'val.']],
-        'tk': [u'', [u'saat sonra karşınızda!', u'saat sonra karşınızda!']],
+        'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
 }
 
 m = {
@@ -144,7 +144,7 @@ m = {
         'bg': [u'още', u'дин', u'още', u'ден'],
         'ja': [u'いよいよ登場！\nあと', u'日'],
         'wa': [u'Co', u'djoûs a\nratinde', u'Co', u'djoû a ratinde'],
-	'cn': [u'倒数', u'天'],
+        'cn': [u'倒数', u'天'],
         'tw': [u'倒數', u'天'],
         'gl': [u'Dispoñible en', u'días', u'Dispoñible en', u'día'],
         'lt': msg_lt,
