@@ -19,6 +19,7 @@ import shutil
 import atexit
 
 VERSION = "12.2"
+# UTC timestamp!
 RELEASE = datetime.datetime(2012, 9, 5, 12, 0, 0)
 
 VARIANTS = ["label", "nolabel"]
@@ -185,7 +186,7 @@ if options.forced_days != None:
     days = options.forced_days
     seconds = 0
 else:
-    diff = (RELEASE - datetime.datetime.now())
+    diff = (RELEASE - datetime.datetime.utcnow())
     days = diff.days
     seconds = diff.seconds
     pass
