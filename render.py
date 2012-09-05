@@ -19,7 +19,7 @@ import shutil
 import atexit
 
 VERSION = "12.2"
-RELEASE = datetime.datetime(2012, 9, 5, 14, 0, 0)
+RELEASE = datetime.datetime(2012, 9, 5, 12, 0, 0)
 
 VARIANTS = ["label", "nolabel"]
 
