@@ -42,6 +42,11 @@ if [ -n "$RENDER" ]; then
         [ -e "$f" ] || continue
         cp -a "$f" "$LOCAL/"
     done
+    pushd "$LOCAL/"
+        for i in *-label*.png ; do
+            ln -s $i ${i//-label} ;
+        done
+    popd
 fi
 
 if [ -n "$BINARY" ]; then
@@ -50,8 +55,12 @@ if [ -n "$BINARY" ]; then
     days_left=$(printf "%02d" $(($(($BINARY_FINAL_DATE-$TODAY+86400))/86400)))
     [ $days_left -le 00 ] && days_left=00
     for size in large medium small; do
-        wget "${BINARY_LOCATION}/${days_left}-$size.png" -O "$LOCAL/$size-nolabel.en.png"
-        ln -s "$LOCAL/$size-nolabel.en.png" "$LOCAL/$size-label.en.png"
+        wget "${BINARY_LOCATION}/${days_left}-$size.png" -P "$LOCAL"
+        for lang in en de cs sk fr da ru pl nl fi es it el sv hr nb pt pt_BR hu ro si cn tw id bg ja wa gl ge lt tr; do
+            for suffix in label nolabel; do
+                ln -s "${days_left}-$size.png" "$LOCAL/$size-$suffix.$lang.png"
+            done
+        done
     done
 fi
 
