@@ -56,6 +56,7 @@ if [ -n "$BINARY" ]; then
     [ $days_left -le 00 ] && days_left=00
     for size in large medium small; do
         wget "${BINARY_LOCATION}/${days_left}-$size.png" -P "$LOCAL"
+        ln -s "${days_left}-$size.png" "$LOCAL/$size.$lang.png"
         for lang in en de cs sk fr da ru pl nl fi es it el sv hr nb pt pt_BR hu ro si cn tw id bg ja wa gl ge lt tr; do
             for suffix in label nolabel; do
                 ln -s "${days_left}-$size.png" "$LOCAL/$size-$suffix.$lang.png"
