@@ -3,7 +3,7 @@ REMOTE_HOST="counter.o.o"
 BASEDIR="/home/counter.opensuse.org/svg"
 LOCAL="/home/counter.opensuse.org/output"
 BINARY_LOCATION="https://raw.github.com/openSUSE/artwork/master/Marketing%20Materials/Events/openSUSE%20Conference/2013-oS-Conference/countdown-banner"
-BINARY_FINAL_DATE=$(date -d "2013-07-18" +%s)
+BINARY_FINAL_DATE=$(date -d "2014-11-04" +%s)
 REMOTE_LOCATION="counter.o.o:/srv/www/vhosts/0b965c33b89fac9ea53708de378f93dcda084d34/opensuse.org/counter/htdocs"
 
 set -e
