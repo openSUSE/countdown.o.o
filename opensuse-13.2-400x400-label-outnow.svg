@@ -28,7 +28,7 @@
      inkscape:cx="3.2046002"
      inkscape:cy="174.27142"
      inkscape:document-units="px"
-     inkscape:current-layer="g3360"
+     inkscape:current-layer="layer1"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
@@ -2030,8 +2030,7 @@
      transform="translate(0,-652.36218)"
      id="layer1"
      inkscape:groupmode="layer"
-     inkscape:label="backgrounds"
-     sodipodi:insensitive="true">
+     inkscape:label="backgrounds">
     <g
        id="g3317">
       <text
