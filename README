@@ -1,0 +1,96 @@
+countdown.opensuse.org
+======================================================================
+
+This repo contains svg template used on any counter we use in openSUSE infrastructure.
+
+If you want to work on counter for a new distribution,(or any event) please
+create a fork based on master, work on your fork and then send a pull request.
+
+see below detailled instructions.
+
+Work is published normally with cc-by-sa v3 licence
+
+======================================================================
+
+Working with the repo in GitHub
+------------------------------------
+
+On github world : origin link to your forked repository, and we
+standarized the name of the original to upstream by convention.
+
+First, create a fork of openSUSE branding repo, here you have a guide: 
+https://help.github.com/articles/fork-a-repo 
+
+Then clone your fork in your PC:
+
+  git clone https://github.com/$YOUR_GITHUB_ACCOUNT/countdown.o.o.git
+
+and add the original repository as remote:
+
+  cd countdown.o.o
+  git remote add upstream https://github.com/openSUSE/countdown.o.o.git
+
+Fetch the original content and checkout/merge the branch you want to work on:
+(advanced you can work on you own branch, but for simplicity here we will stick on master)
+  git fetch upstream
+  git checkout -b master
+  git merge upstream master
+
+Now you can work with your local branch.
+
+  Add files, rename, remove etc ....
+  if you want to see the result you can render the png by running ./render.py output_dir on you 
+  own computer.
+
+to check what you've changed 
+
+  git status
+
+
+To commit your changes to your fork, do:
+
+  if you have untracked file ( shown as is with git status )
+  just add them with git -a 
+  
+# Example 
+git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 3 commits.
+#   (use "git push" to publish your local commits)
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#       README
+# nothing added to commit but untracked files present (use "git add" to track)
+  git add README
+
+Then to record your changes in the local repository
+  git commit -a -m "A useful description (eventually bnc#NR) describing what change"
+      (use -a if all the changes are relatives to the same commit)
+
+Now time to update your fork on github      
+   git push 
+
+
+Then you can create a pull request you have a guide here : 
+https://help.github.com/articles/creating-a-pull-request
+
+If you want to sync with upstream changes, do a:
+ git fetch upstream
+ git merge upstream master
+
+ (this action is manually what git pull will do if setup)
+
+
+Important files
+===============
+
+ @tobedone
+
+Need help?
+==========
+
+If you need help with the workflow and process, you can contact the following
+people on opensuse-artwork mailing list
+
+  
