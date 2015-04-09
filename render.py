@@ -18,9 +18,12 @@ import tempfile
 import shutil
 import atexit
 
-VERSION = "13.2"
+#VERSION = "13.2"
+#RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
+
+VERSION = "conference"
 # UTC timestamp!
-RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
+RELEASE = datetime.datetime(2015, 05, 01, 8, 0, 0)
 
 VARIANTS = ["label", "nolabel"]
 
@@ -72,7 +75,47 @@ def msg_lt(n):
         post = u'dienos'
     return u'Pasirodys po', post
 
-avail = {
+if VERSION == "conference":
+    avail = {
+        'en': u'Join\nUs!',
+        'de': u' Begleiten\nSie Uns !',
+        'ca': u'Uneix-te\na nosaltres!',
+        'sk': u'Pridajte sa!',
+        'fr': u'Rejoignez-\nnous!',
+        'uk': u'Приєднуйтеся!!',
+        'ru': u'Присоединяйся!',
+        'nl': u'Bezoek!',
+        'es': u'¡Únete a nosotros!',
+        'it': u'Unisciti a noi!',
+        'el': u'Ελάτε μαζί μας!',
+        'pl': u'Dołącz\ndo nas!',
+        'pt': u'Junte-se a nós!',
+        'pt_BR': u'Junte-se a nós!',
+        'ja': u'ご参加ください！',
+        'da': u'Vær\nmed!',
+        'nb': u'Bli\nmed!',
+        'nn': u'Bli\nmed!',
+         }
+
+    almost = {
+        'en': [u'Starts in', [u'hours!', u'hour!']],
+        'ca': [u'Comença d\'aquí a', [u'hores!', u'hora!']],
+        'nl': [u'Begint over', [u'uren!', u'uur']],
+        'fr': [u'Débute dans', [u'heures!', u'heure!']],
+        'de': [u'in', [u'Stunden!', u'Stunde!']],
+        'it': [u'Comincia tra', [u'ore!', u'ora!']],
+        'uk': [u'Розпочнеться через', [u'годин!', u'годину!']],
+        'ru': [u'Начнётся через', [u'часов!', u'час!']],
+        'pt_BR': [u'Começa em!', [u'hours!', u'hour!']],
+        'el': [u'Ξεκινά σε', [u'ώρα!', u'ώρες!']],
+        'es': [u'¡Empieza en', [u'horas!', u'hora!']],
+        'ja': [u'あと [N 時間] で始まります', [u'あと [N 日] で始まりま', u'に始 まります']],
+        'da': [u'Begynder om ', [u'timer!', u'time!']],
+        'nb': [u'Begynner om', [u'timer!', u'time!']],
+        'nn': [u'Begynner om', [u'timar!', u'time!']],
+         }
+else:
+    avail = {
         'en': u'Out\nnow!',
         'de': u'Jetzt\nverfügbar!',
         'cs': u'Nyní\ndostupné!',
@@ -105,7 +148,7 @@ avail = {
         'tr': u'Çıktı!',
         }
 
-almost = {
+    almost = {
         'en': [u'Release in', [u'hours!', u'hour!']],
         'cn': [u'即刻登场', [u'小时！', u'小时！']],
         'tw': [u'即刻登場', [u'小時！', u'小時！']],
@@ -116,7 +159,7 @@ almost = {
         'es': [u'¡Disponible en', [u'horas!', u'hora!']],
         'lt': [u'Pasirodys po', [u'val.', u'val.']],
         'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
-}
+        }
 
 m = {
         'en': [u'Only', u'days to go', u'', u'day to go'],
