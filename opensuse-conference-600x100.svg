@@ -1288,4 +1288,45 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="text" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="labels">
+    <text
+       xml:space="preserve"
+       style="font-size:42px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3681-2);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Ultra-Bold"
+       x="348.97562"
+       y="56.582523"
+       id="text3485"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3487"
+         x="348.97562"
+         y="56.582523"
+         style="font-size:26px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">@_BOTTOM_@</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:140px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;filter:url(#filter6553-33);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+       x="300.61185"
+       y="76.460083"
+       id="use3721"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3145"
+         x="300.61185"
+         y="76.460083"
+         style="font-size:80px">@@</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:42px;font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3669-8);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Ultra-Bold"
+       x="240.30936"
+       y="56.076237"
+       id="text3501"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3503"
+         x="240.30936"
+         y="56.076237"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">@_TOP_@</tspan></text>
+  </g>
 </svg>

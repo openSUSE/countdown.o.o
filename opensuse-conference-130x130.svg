@@ -1275,4 +1275,85 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="text" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="labels">
+    <g
+       transform="translate(3.3154297e-7,-922.36218)"
+       id="g3091">
+      <text
+         sodipodi:linespacing="100%"
+         id="text3485"
+         y="1030.4053"
+         x="64.989876"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3079-9);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         xml:space="preserve"><tspan
+           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+           y="1030.4053"
+           x="64.989876"
+           id="tspan3487"
+           sodipodi:role="line">@BOTTOM@</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3091-2);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         x="64.989876"
+         y="967.19202"
+         id="text2391"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan2393"
+           x="64.989876"
+           y="967.19202"
+           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">@TOP@</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3984-8);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         x="64.982719"
+         y="1009.9695"
+         id="use4801"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan3980"
+           x="64.982719"
+           y="1009.9695"
+           style="font-size:52px;stroke:none">@@</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3067-7);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         x="64.989876"
+         y="1048.4052"
+         id="text3130"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan3132"
+           x="64.989876"
+           y="1048.4052"
+           style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">@BOTTOMC@</tspan></text>
+      <text
+         sodipodi:linespacing="100%"
+         id="text3530"
+         y="949.19202"
+         x="64.989876"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;filter:url(#filter3103-2);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         xml:space="preserve"><tspan
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+           y="949.19202"
+           x="64.989876"
+           id="tspan3532"
+           sodipodi:role="line">@TOPC@</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5060"
+         y="938.62866"
+         x="8.332361"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Droid Sans Mono;-inkscape-font-specification:Droid Sans Mono"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:0.14978956px;fill:#ffffff;fill-opacity:1;font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+           y="938.62866"
+           x="8.332361"
+           id="tspan5062"
+           sodipodi:role="line">openSUSE ##.#</tspan></text>
+    </g>
+  </g>
 </svg>
