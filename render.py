@@ -18,12 +18,12 @@ import tempfile
 import shutil
 import atexit
 
-#VERSION = "13.2"
-#RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
+VERSION = "13.2"
+RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
 
-VERSION = "conference"
+#VERSION = "conference"
 # UTC timestamp!
-RELEASE = datetime.datetime(2015, 05, 01, 8, 0, 0)
+#RELEASE = datetime.datetime(2015, 05, 01, 8, 0, 0)
 
 VARIANTS = ["label", "nolabel"]
 
