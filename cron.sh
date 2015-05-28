@@ -11,12 +11,14 @@ set -e
 VERBOSE=
 RENDER=
 REMOTE=
-while getopts 'vREB' v; do
+GIT_PULL=
+while getopts 'vREBG' v; do
     case $v in
         v) VERBOSE=1;;
         R) REMOTE=1;;
         E) RENDER=1;;
         B) BINARY=1;;
+        G) GIT_PULL=1;;
         *) echo "ERROR: unsupported parameter -$v">&2; exit 1;;
     esac
 done
@@ -24,6 +26,14 @@ shift $(( $OPTIND - 1 ))
 
 RFLAGS=""
 [ -n "$VERBOSE" ] && RFLAGS="$RFLAGS -v"
+
+if [ -n "$GIT_PULL" ]; then
+    cd "$BASEDIR"
+    GFLAGS=""
+    [ -n "$VERBOSE" ] && GFLAGS="$GFLAGS --verbose"
+    git pull --ff-only $GFLAGS
+fi
+
 
 mkdir -p "$LOCAL"
 /bin/rm -f "$LOCAL"/*.png
