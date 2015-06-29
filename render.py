@@ -303,6 +303,9 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 if options.verbose:
                     print "skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template)
                     pass
+                if var:
+                    print >>sys.stderr, "Needed template \"%s\" is missing. Aborting" % (template)
+                    sys.exit(1)
                 continue
 
             outfile = "%s/%s%s.%s.png" % (outdir, size[2], var, lang)
