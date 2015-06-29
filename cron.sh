@@ -53,9 +53,17 @@ if [ -n "$RENDER" ]; then
         cp -a "$f" "$LOCAL/"
     done
     pushd "$LOCAL/"
+    shopt -s nullglob
+    copied=
         for i in *-label*.png ; do
             ln -s $i ${i//-label} ;
+            copied=1
         done
+    shopt -u nullglob
+    if [ ! -n "$copied" ]; then
+       echo "There seems to be no generated images. Please check the output of \"./render.py $RFLAGS $LOCAL/\""
+       exit 1
+    fi
     popd
 fi
 
