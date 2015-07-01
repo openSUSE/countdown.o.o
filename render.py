@@ -18,12 +18,14 @@ import tempfile
 import shutil
 import atexit
 
+# VERSION should be a release number or "conference" as in the following examples:
+# VERSION = "13.2"
+# VERSION = "conference"
 VERSION = "13.2"
+
+# UTC timestamp!
 RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
 
-#VERSION = "conference"
-# UTC timestamp!
-#RELEASE = datetime.datetime(2015, 05, 01, 8, 0, 0)
 
 VARIANTS = ["label", "nolabel"]
 
