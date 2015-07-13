@@ -18,12 +18,14 @@ import tempfile
 import shutil
 import atexit
 
-#VERSION = "13.2"
-#RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
+# VERSION should be a release number or "conference" as in the following examples:
+# VERSION = "13.2"
+# VERSION = "conference"
+VERSION = "13.2"
 
-VERSION = "conference"
 # UTC timestamp!
-RELEASE = datetime.datetime(2015, 05, 01, 8, 0, 0)
+RELEASE = datetime.datetime(2014, 11, 04, 12, 0, 0)
+
 
 VARIANTS = ["label", "nolabel"]
 
@@ -303,6 +305,9 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 if options.verbose:
                     print "skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template)
                     pass
+                if var:
+                    print >>sys.stderr, "Needed template \"%s\" is missing. Aborting" % (template)
+                    sys.exit(1)
                 continue
 
             outfile = "%s/%s%s.%s.png" % (outdir, size[2], var, lang)
