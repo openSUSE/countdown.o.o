@@ -16,7 +16,7 @@
    id="svg3321"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="opensuse-42.1-400x400-nolabel.svg">
+   sodipodi:docname="opensuse-42.1-400x400-label-outnow.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,9 +24,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="133.77384"
-     inkscape:cy="128.43926"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-105.16894"
+     inkscape:cy="249.77103"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1707,27 +1707,27 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3280)"
-       x="204.97342"
-       y="920.96155"
+       x="205.02419"
+       y="919.76068"
        id="text3485"
        sodipodi:linespacing="100%"
-       transform="matrix(1.231147,0,0,1.231147,-47.385136,-214.90068)"><tspan
+       transform="matrix(1.2149586,0,0,1.2149586,-38.521581,-199.59194)"><tspan
          sodipodi:role="line"
          id="tspan3487"
-         x="204.97342"
-         y="920.96155"
+         x="205.02419"
+         y="919.76068"
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1">@BOTTOM@</tspan></text>
     <text
        sodipodi:linespacing="100%"
        id="text2391"
-       y="845.06433"
-       x="202.83057"
+       y="853.50092"
+       x="203.00388"
        style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3292)"
        xml:space="preserve"
-       transform="matrix(1.231147,0,0,1.231147,-47.385136,-214.90068)"><tspan
+       transform="matrix(1.2149586,0,0,1.2149586,-38.521581,-199.59194)"><tspan
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
-         y="845.06433"
-         x="202.83057"
+         y="853.50092"
+         x="203.00388"
          id="tspan2393"
          sodipodi:role="line">@TOP@</tspan></text>
     <text

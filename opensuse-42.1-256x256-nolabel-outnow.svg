@@ -11,12 +11,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="400"
-   height="400"
+   width="256"
+   height="256"
    id="svg3321"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="opensuse-42.1-400x400-nolabel.svg">
+   sodipodi:docname="opensuse-42.1-256x256-nolabel.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="133.77384"
-     inkscape:cy="128.43926"
+     inkscape:cx="316.42327"
+     inkscape:cy="87.372701"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -53,7 +53,7 @@
     <filter
        id="filter5966"
        inkscape:collect="always"
-       color-interpolation-filters="sRGB">
+       style="color-interpolation-filters:sRGB">
       <feGaussianBlur
          id="feGaussianBlur5968"
          stdDeviation="0.54696623"
@@ -250,8 +250,8 @@
        inkscape:label="Drop shadow"
        width="1.5"
        height="1.5"
-       x="-.25"
-       y="-.25">
+       x="-0.25"
+       y="-0.25">
       <feGaussianBlur
          id="feGaussianBlur6555"
          in="SourceAlpha"
@@ -283,8 +283,8 @@
        inkscape:label="Drop shadow"
        width="1.5"
        height="1.5"
-       x="-.25"
-       y="-.25">
+       x="-0.25"
+       y="-0.25">
       <feGaussianBlur
          id="feGaussianBlur6597"
          in="SourceAlpha"
@@ -549,13 +549,13 @@
          style="stop-color:#217808;stop-opacity:1" />
     </linearGradient>
     <filter
-       color-interpolation-filters="sRGB"
        id="filter6553-1"
        inkscape:label="Drop shadow"
        width="1.5"
        height="1.5"
        x="-0.25"
-       y="-0.25">
+       y="-0.25"
+       style="color-interpolation-filters:sRGB">
       <feGaussianBlur
          id="feGaussianBlur6555-0"
          in="SourceAlpha"
@@ -627,8 +627,8 @@
        inkscape:label="Drop shadow"
        width="1.5"
        height="1.5"
-       x="-.25"
-       y="-.25">
+       x="-0.25"
+       y="-0.25">
       <feGaussianBlur
          id="feGaussianBlur3659"
          in="SourceAlpha"
@@ -728,8 +728,8 @@
          offset="1" />
     </linearGradient>
     <filter
-       y="-.25"
-       x="-.25"
+       y="-0.25"
+       x="-0.25"
        height="1.5"
        width="1.5"
        inkscape:label="Drop shadow"
@@ -939,8 +939,8 @@
        x2="904.80048"
        y2="536.00049" />
     <filter
-       y="-.25"
-       x="-.25"
+       y="-0.25"
+       x="-0.25"
        height="1.5"
        width="1.5"
        inkscape:label="Drop shadow"
@@ -972,8 +972,8 @@
       </feMerge>
     </filter>
     <filter
-       y="-.25"
-       x="-.25"
+       y="-0.25"
+       x="-0.25"
        height="1.5"
        width="1.5"
        inkscape:label="Drop shadow"
@@ -1303,7 +1303,7 @@
        id="clipPath4265">
       <rect
          transform="translate(231.87082,-62.795211)"
-         style="color:#000000;fill:none;stroke:none;stroke-width:3.59687734;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:3.59687734;marker:none;enable-background:accumulate"
          id="rect4267"
          width="1600"
          height="1200"
@@ -1324,7 +1324,7 @@
        r="800" />
     <filter
        id="filter3268"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow">
       <feFlood
          id="feFlood3270"
@@ -1339,7 +1339,6 @@
          result="composite1" />
       <feGaussianBlur
          id="feGaussianBlur3274"
-         in="composite"
          stdDeviation="1.5"
          result="blur" />
       <feOffset
@@ -1356,7 +1355,7 @@
     </filter>
     <filter
        id="filter3280"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow">
       <feFlood
          id="feFlood3282"
@@ -1371,7 +1370,6 @@
          result="composite1" />
       <feGaussianBlur
          id="feGaussianBlur3286"
-         in="composite"
          stdDeviation="1.5"
          result="blur" />
       <feOffset
@@ -1388,7 +1386,7 @@
     </filter>
     <filter
        id="filter3292"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow">
       <feFlood
          id="feFlood3294"
@@ -1403,7 +1401,6 @@
          result="composite1" />
       <feGaussianBlur
          id="feGaussianBlur3298"
-         in="composite"
          stdDeviation="1.5"
          result="blur" />
       <feOffset
@@ -1420,7 +1417,7 @@
     </filter>
     <filter
        id="filter3304"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow">
       <feFlood
          id="feFlood3306"
@@ -1435,7 +1432,6 @@
          result="composite1" />
       <feGaussianBlur
          id="feGaussianBlur3310"
-         in="composite"
          stdDeviation="1.5"
          result="blur" />
       <feOffset
@@ -1513,24 +1509,24 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(0,-652.36218)"
+     transform="translate(0,-796.36218)"
      id="layer1"
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <rect
        style="display:inline;fill:#173f4f;fill-opacity:1;stroke:none;stroke-width:4.5999999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect5125"
-       width="409.28574"
-       height="407.14285"
+       width="263.48303"
+       height="262.10355"
        x="-3.9285777"
-       y="649.50507" />
+       y="794.54443" />
     <g
-       transform="matrix(-1.4701115,-0.84876925,0.84876925,-1.4701115,336.13043,2901.9566)"
+       transform="matrix(-0.94640346,-0.54640628,0.54640628,-0.94640346,213.56027,2243.1608)"
        style="display:inline"
        id="g5847">
       <path
@@ -1597,7 +1593,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 41.388868,1036.1893 -9.646058,16.7075 -19.292116,0 -9.646058,-16.7075 9.646058,-16.7074 19.292116,0 z"
-       transform="matrix(0.83772593,-1.4509839,1.4509839,0.83772593,-1489.4492,47.055999)" />
+       transform="matrix(0.539297,-0.93408982,0.93408982,0.539297,-958.8233,406.70995)" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:#00a489;fill-opacity:1;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1613,7 +1609,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 71.276525,1018.6891 -9.646058,16.7074 -19.292116,0 -9.646058,-16.7074 9.646058,-16.7075 19.292116,0 z"
-       transform="matrix(0.83772593,-1.4509839,1.4509839,0.83772593,-1489.4492,47.055999)" />
+       transform="matrix(0.539297,-0.93408982,0.93408982,0.539297,-958.8233,406.70995)" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:#6da741;fill-opacity:0.94117647;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1629,7 +1625,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 101.27653,1035.998 -9.646059,16.7075 -19.292116,0 -9.646058,-16.7075 9.646058,-16.7074 19.292116,0 z"
-       transform="matrix(0.83772593,-1.4509839,1.4509839,0.83772593,-1489.4492,47.055999)" />
+       transform="matrix(0.539297,-0.93408982,0.93408982,0.539297,-958.8233,406.70995)" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:#00a489;fill-opacity:1;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1645,7 +1641,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m -122.83145,-1002.1237 -9.64606,16.70744 -19.29211,0 -9.64606,-16.70744 9.64606,-16.7075 19.29211,0 z"
-       transform="matrix(-0.83772593,1.4509839,-1.4509839,-0.83772593,-1489.4492,47.055999)" />
+       transform="matrix(-0.539297,0.93408982,-0.93408982,-0.539297,-958.8233,406.70995)" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:#6da741;fill-opacity:0.94117647;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1661,7 +1657,7 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m -92.831457,-984.81512 -9.646063,16.70746 -19.29211,0 -9.64606,-16.70746 9.64606,-16.70748 19.29211,0 z"
-       transform="matrix(-0.83772593,1.4509839,-1.4509839,-0.83772593,-1489.4492,47.055999)" />
+       transform="matrix(-0.539297,0.93408982,-0.93408982,-0.539297,-958.8233,406.70995)" />
     <path
        sodipodi:type="star"
        style="display:inline;fill:#73ba25;fill-opacity:1;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1677,16 +1673,16 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m -92.665564,-1019.1833 -9.646056,16.7075 -19.29212,0 -9.64606,-16.7075 9.64606,-16.7075 19.29212,0 z"
-       transform="matrix(-0.83772593,1.4509839,-1.4509839,-0.83772593,-1489.4492,47.055999)" />
+       transform="matrix(-0.539297,0.93408982,-0.93408982,-0.539297,-958.8233,406.70995)" />
     <g
-       transform="matrix(0.80496889,0,0,0.80496889,81.408267,411.91005)"
+       transform="matrix(0.51820922,0,0,0.51820922,51.008129,641.5895)"
        id="g3543">
       <text
          sodipodi:linespacing="125%"
          id="text5976"
          y="394.65756"
          x="92.515228"
-         style="font-size:32.11002731px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter5966);font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.11002731px;line-height:125%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter5966)"
          xml:space="preserve"><tspan
            id="tspan5986"
            sodipodi:role="line"
@@ -1694,7 +1690,7 @@
            y="394.65756">Linux for open minds</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:32.11002731px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32.11002731px;line-height:125%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="92.515228"
          y="392.65756"
          id="text5980"
@@ -1707,27 +1703,27 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3280)"
-       x="204.97342"
-       y="920.96155"
+       x="199.97342"
+       y="982.39014"
        id="text3485"
        sodipodi:linespacing="100%"
-       transform="matrix(1.231147,0,0,1.231147,-47.385136,-214.90068)"><tspan
+       transform="matrix(0.64376305,0,0,0.64376305,-1.3995045,376.41703)"><tspan
          sodipodi:role="line"
          id="tspan3487"
-         x="204.97342"
-         y="920.96155"
+         x="199.97342"
+         y="982.39014"
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1">@BOTTOM@</tspan></text>
     <text
        sodipodi:linespacing="100%"
        id="text2391"
-       y="845.06433"
-       x="202.83057"
+       y="810.06433"
+       x="199.97342"
        style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3292)"
        xml:space="preserve"
-       transform="matrix(1.231147,0,0,1.231147,-47.385136,-214.90068)"><tspan
+       transform="matrix(0.64376305,0,0,0.64376305,-1.3995045,376.41703)"><tspan
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
-         y="845.06433"
-         x="202.83057"
+         y="810.06433"
+         x="199.97342"
          id="tspan2393"
          sodipodi:role="line">@TOP@</tspan></text>
     <text
@@ -1735,12 +1731,47 @@
        id="text3194"
        y="560.65973"
        x="199.91141"
-       style="font-size:140px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill-opacity:1;stroke:none;display:inline;font-family:FifthLeg;-inkscape-font-specification:FifthLeg Bold"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:140px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="560.65973"
          x="199.91141"
          id="tspan3196"
          sodipodi:role="line">@@</tspan></text>
+    <use
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter6553)"
+       height="400"
+       width="400"
+       transform="matrix(0.64376305,0,0,0.64376305,-1.3995053,609.51975)"
+       id="use3721"
+       xlink:href="#text3194"
+       y="0"
+       x="0" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text3319"
+       y="1016.3901"
+       x="199.97342"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3268)"
+       xml:space="preserve"
+       transform="matrix(0.64376305,0,0,0.64376305,-1.3995045,376.41703)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
+         y="1016.3901"
+         x="199.97342"
+         id="tspan3321"
+         sodipodi:role="line">@BOTTOMC@</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3304)"
+       x="199.97342"
+       y="778.06427"
+       id="text3501"
+       sodipodi:linespacing="100%"
+       transform="matrix(0.64376305,0,0,0.64376305,-1.3995045,376.41703)"><tspan
+         sodipodi:role="line"
+         id="tspan3503"
+         x="199.97342"
+         y="778.06427"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1">@TOPC@</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3894"
@@ -1748,7 +1779,7 @@
        x="6.7856574"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.04607773px;line-height:125%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:url(#linearGradient4948-2);fill-opacity:1;stroke:none;filter:url(#filter4737-0)"
        xml:space="preserve"
-       transform="matrix(0.70400501,0,0,0.667125,132.81762,211.38183)"><tspan
+       transform="matrix(0.48648572,0,0,0.46100068,83.131075,491.7661)"><tspan
          style="fill:url(#linearGradient4948-2);fill-opacity:1"
          dx="0 0 0 0 0 0 0 0 0 0 0 0"
          y="718.18225"

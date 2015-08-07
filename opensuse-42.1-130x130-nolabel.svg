@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="151.55762"
+     inkscape:cx="145.30762"
      inkscape:cy="74.752368"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -1509,7 +1509,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1707,7 +1707,7 @@
        y="982.39014"
        id="text3485"
        sodipodi:linespacing="100%"
-       transform="matrix(0.32621921,0,0,0.32621921,0.21014272,709.80622)"><tspan
+       transform="matrix(0.39717597,0,0,0.39717597,-13.266923,621.62079)"><tspan
          sodipodi:role="line"
          id="tspan3487"
          x="199.97342"
@@ -1720,7 +1720,7 @@
        x="199.97342"
        style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3292)"
        xml:space="preserve"
-       transform="matrix(0.32621921,0,0,0.32621921,0.21014272,709.80622)"><tspan
+       transform="matrix(0.39717597,0,0,0.39717597,-14.136575,658.58099)"><tspan
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
          y="810.06433"
          x="199.97342"
@@ -1737,41 +1737,6 @@
          x="199.91141"
          id="tspan3196"
          sodipodi:role="line">@@</tspan></text>
-    <use
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter6553)"
-       height="400"
-       width="400"
-       transform="matrix(0.32621921,0,0,0.32621921,0.21014231,827.92823)"
-       id="use3721"
-       xlink:href="#text3194"
-       y="0"
-       x="0" />
-    <text
-       sodipodi:linespacing="100%"
-       id="text3319"
-       y="1016.3901"
-       x="199.97342"
-       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3268)"
-       xml:space="preserve"
-       transform="matrix(0.32621921,0,0,0.32621921,0.21014272,709.80622)"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1"
-         y="1016.3901"
-         x="199.97342"
-         id="tspan3321"
-         sodipodi:role="line">@BOTTOMC@</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3304)"
-       x="199.97342"
-       y="778.06427"
-       id="text3501"
-       sodipodi:linespacing="100%"
-       transform="matrix(0.32621921,0,0,0.32621921,0.21014272,709.80622)"><tspan
-         sodipodi:role="line"
-         id="tspan3503"
-         x="199.97342"
-         y="778.06427"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1">@TOPC@</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3894"

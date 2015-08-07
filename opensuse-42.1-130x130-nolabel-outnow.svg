@@ -1509,7 +1509,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1741,7 +1741,7 @@
        style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter6553)"
        height="400"
        width="400"
-       transform="matrix(0.32621921,0,0,0.32621921,6.9958566,829.3568)"
+       transform="matrix(0.32621921,0,0,0.32621921,0.21014231,827.92823)"
        id="use3721"
        xlink:href="#text3194"
        y="0"
