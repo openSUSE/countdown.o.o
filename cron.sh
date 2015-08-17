@@ -52,7 +52,7 @@ if [ -n "$RENDER" ]; then
         [ -e "$f" ] || continue
         cp -a "$f" "$LOCAL/"
     done
-    pushd "$LOCAL/"
+    pushd "$LOCAL/" > /dev/null
     shopt -s nullglob
     copied=
         for i in *-label*.png ; do
@@ -64,7 +64,7 @@ if [ -n "$RENDER" ]; then
        echo "There seems to be no generated images. Please check the output of \"./render.py $RFLAGS $LOCAL/\""
        exit 1
     fi
-    popd
+    popd > /dev/null
 fi
 
 if [ -n "$BINARY" ]; then
