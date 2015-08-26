@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="262.83238"
+     inkscape:cx="250.33238"
      inkscape:cy="116.35192"
      inkscape:document-units="px"
      inkscape:current-layer="g3930"
@@ -5377,7 +5377,7 @@
        y="951.64789" />
     <g
        id="g5822"
-       transform="translate(-30.714285,0)">
+       transform="translate(-30.714285,16.428571)">
       <path
          d="m 41.388868,1036.1893 -9.646058,16.7075 -19.292116,0 -9.646058,-16.7075 9.646058,-16.7074 19.292116,0 z"
          inkscape:randomized="0"
@@ -5453,22 +5453,6 @@
          sodipodi:sides="6"
          id="path5139-6-3"
          style="display:inline;fill:#00a489;fill-opacity:1;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         sodipodi:type="star" />
-      <path
-         transform="scale(-1,-1)"
-         d="m -92.831457,-984.81512 -9.646063,16.70746 -19.29211,0 -9.64606,-16.70746 9.64606,-16.70748 19.29211,0 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="true"
-         sodipodi:arg2="0.52359878"
-         sodipodi:arg1="0"
-         sodipodi:r2="16.707462"
-         sodipodi:r1="19.292116"
-         sodipodi:cy="-984.81512"
-         sodipodi:cx="-112.12357"
-         sodipodi:sides="6"
-         id="path5139-6-7-7"
-         style="display:inline;fill:#6da741;fill-opacity:0.94117647;stroke:none;stroke-width:1.72490716;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          sodipodi:type="star" />
       <path
          transform="scale(-1,-1)"
@@ -5568,13 +5552,13 @@
          x="6.7856574"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:47.04607773px;line-height:125%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient4948-2);fill-opacity:1;stroke:none;filter:url(#filter4737-0)"
          xml:space="preserve"
-         transform="matrix(0.66965986,0,0,0.63457905,203.71367,550.60621)"><tspan
+         transform="matrix(0.66965986,0,0,0.63457905,150.85653,539.89192)"><tspan
            style="fill:url(#linearGradient4948-2);fill-opacity:1"
-           dx="0 0 0 0 0 0 0 0 0 0 0 0"
+           dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
            y="718.18225"
            x="6.7856574"
            id="tspan3896"
-           sodipodi:role="line">openSUSE ##.#</tspan></text>
+           sodipodi:role="line">openSUSE Leap ##.#</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3896-3)"
@@ -5595,7 +5579,7 @@
          x="366.83347"
          style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:42px;line-height:100%;font-family:FifthLeg;-inkscape-font-specification:'FifthLeg Ultra-Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3884-8)"
          xml:space="preserve"
-         transform="matrix(0.97503613,0,0,0.97503613,105.85527,26.120039)"><tspan
+         transform="matrix(0.97503613,0,0,0.97503613,105.85527,24.691468)"><tspan
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:26px;line-height:100%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1"
            y="993.20862"
            x="366.83347"
