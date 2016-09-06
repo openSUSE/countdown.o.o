@@ -5,7 +5,7 @@
 # Release countdown banner generation script
 # by Pascal Bleser <pascal.bleser@opensuse.org>
 # Artwork by jimmac
-#
+# Artwork for Leap 42.2 by Victorhck
 
 import sys
 import datetime
