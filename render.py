@@ -72,9 +72,9 @@ def msg_sk(n):
 
 def msg_lt(n):
     if (n % 10 == 1) and (n != 11):
-        post = u'dienų'
-    else:
         post = u'dienos'
+    else:
+        post = u'dienų'
     return u'Pasirodys po', post
 
 if VERSION == "conference":
@@ -97,6 +97,7 @@ if VERSION == "conference":
         'da': u'Vær\nmed!',
         'nb': u'Bli\nmed!',
         'nn': u'Bli\nmed!',
+        'lt': u'Dalyvaukite!',
          }
 
     almost = {
@@ -115,6 +116,7 @@ if VERSION == "conference":
         'da': [u'Begynder om ', [u'timer!', u'time!']],
         'nb': [u'Begynner om', [u'timer!', u'time!']],
         'nn': [u'Begynner om', [u'timar!', u'time!']],
+        'lt': [u'Prasidės po', [u'val.!', u'val.!']],
          }
 else:
     avail = {
