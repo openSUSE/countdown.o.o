@@ -98,6 +98,7 @@ if VERSION == "conference":
         'nb': u'Bli\nmed!',
         'nn': u'Bli\nmed!',
         'lt': u'Dalyvaukite!',
+        'zh': u'加入我们！',
          }
 
     almost = {
@@ -117,6 +118,7 @@ if VERSION == "conference":
         'nb': [u'Begynner om', [u'timer!', u'time!']],
         'nn': [u'Begynner om', [u'timar!', u'time!']],
         'lt': [u'Prasidės po', [u'val.!', u'val.!']],
+        'zh': [u'将在', [u'小时后开始！', u'小时后开始！']],
          }
 else:
     avail = {
@@ -140,7 +142,6 @@ else:
         'hu': u'Megjelent',
         'ro': u'Disponibil\nacum!',
         'si': u'Zunaj\nZdaj!',
-        'cn': u'盛装发布！',
         'tw': u'盛裝發佈！',
         'id': u'Download\nsekarang',
         'bg': u'довнлоад\nсега!',
@@ -150,11 +151,11 @@ else:
         'ge': u'არსებული',
         'lt': u'Išleista!',
         'tr': u'Çıktı!',
+        'zh': u'现已发布！',
         }
 
     almost = {
         'en': [u'Release in', [u'hours!', u'hour!']],
-        'cn': [u'即刻登场', [u'小时！', u'小时！']],
         'tw': [u'即刻登場', [u'小時！', u'小時！']],
         'fr': [u'Plus que', [u'heures!', u'heure!']],
         'de': [u'Verfügbar in', [u'Stunden!', u'Stunde!']],
@@ -163,6 +164,7 @@ else:
         'es': [u'¡Disponible en', [u'horas!', u'hora!']],
         'lt': [u'Pasirodys po', [u'val.', u'val.']],
         'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
+        'zh': [u'', [u'小时后发布！', u'小时后发布！']],
         }
 
 m = {
@@ -190,26 +192,29 @@ m = {
         'bg': [u'още', u'дин', u'още', u'ден'],
         'ja': [u'いよいよ登場！\nあと', u'日'],
         'wa': [u'Co', u'djoûs a\nratinde', u'Co', u'djoû a ratinde'],
-        'cn': [u'倒数', u'天'],
         'tw': [u'倒數', u'天'],
         'gl': [u'Dispoñible en', u'días', u'Dispoñible en', u'día'],
         'lt': msg_lt,
         'tr': [u'', u'gün kaldı'],
+        'zh': [u'仅剩', u'天'],
 }
 
 extra = {
         'tr': {
             u'Linux for open minds': u'Açık fikirliler için linux',
-        }
+        },
+        'zh': {
+            u'Linux for open minds': u'Linux 献给开放的思想',
+        },
 }
 
 font_override = {
-        'cn': 'Droid Sans Fallback',
         'tw': 'Droid Sans Fallback',
         #'ja': 'Droid Sans Fallback',
         'ja': 'IPAGothic',
         #'cn': "AR PL SungtiL GB",
         #'tw': "AR PL KaitiM Big5",
+        'zh': 'Droid Sans Fallback',
         }
 
 font_to_replace = u'DejaVu Sans'
