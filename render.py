@@ -5,7 +5,7 @@
 # Release countdown banner generation script
 # by Pascal Bleser <pascal.bleser@opensuse.org>
 # Artwork by jimmac
-# Artwork for Leap 42.2 by Victorhck
+# Artwork for Leap 42.3 by Victorhck
 
 import sys
 import datetime
@@ -21,10 +21,10 @@ import atexit
 # VERSION should be a release number or "conference" as in the following examples:
 # VERSION = "13.2"
 # VERSION = "conference"
-VERSION = "42.2"
+VERSION = "42.3"
 
 # UTC timestamp!
-RELEASE = datetime.datetime(2016, 11, 16, 12, 0, 0)
+RELEASE = datetime.datetime(2017, 07, 26, 12, 0, 0)
 
 
 VARIANTS = ["label", "nolabel"]
