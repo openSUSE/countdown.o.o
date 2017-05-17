@@ -17,8 +17,8 @@ import shutil
 import atexit
 
 #VERSION = 2011
-RELEASE_BEGIN = datetime.datetime(2016, 11, 16, 12, 0, 0)
-RELEASE_END = datetime.datetime(2016, 11, 26, 0, 0)
+RELEASE_BEGIN = datetime.datetime(2017, 07, 26, 12, 0, 0)
+RELEASE_END = datetime.datetime(2017, 07, 26, 0, 0)
 VERSION = RELEASE_BEGIN.year
 
 # dimensions are tuples of (width,height,name)
