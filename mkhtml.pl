@@ -12,7 +12,7 @@ my %lang = (
     'sk' => [ 'Slovak' ],
     'da' => [ 'Danish' ],
     'ru' => [ 'Russian' ],
-    'pl' => [ 'Polish' ],
+    'pl' => [ 'Polish', 'Polski' ],
     'fi' => [ 'Finnish' ],
     'es' => [ 'Spanish', 'Español' ],
     'it' => [ 'Italian', 'Italiano' ],
@@ -33,6 +33,24 @@ my %lang = (
     'wa' => [ 'Walloon', 'Wallon' ],
     'gl' => [ 'Galician', 'Galego' ],
     'ge' => [ 'Georgian' ],
+    'lt' => [ 'Lithuania' ],
+    'tr' => [ 'Turkish' ],
+    'zh' => [ 'Mandarin' ],
+);
+
+my %sizes = (
+    'large' => [ 400, 400, 'Default' ],
+    'medium' => [ 256, 256, 'Default' ],
+    'small' => [ 130, 130, 'Default' ],
+    'wide' => [ 600, 100, 'Default' ],
+    'large-label' => [ 400, 400, 'With Labels' ],
+    'medium-label' => [ 256, 256, 'With Labels' ],
+    'small-label' => [ 130, 130, 'With Labels' ],
+    'wide-label' => [ 600, 100, 'With Labels' ],
+    'large-nolabel' => [ 400, 400, 'Without Labels' ],
+    'medium-nolabel' => [ 256, 256, 'Without Labels' ],
+    'small-nolabel' => [ 130, 130, 'Without Labels' ],
+    'wide-nolabel' => [ 600, 100, 'Without Labels' ],
 );
 
 my @order = qw(small medium large wide);
@@ -41,18 +59,26 @@ my $dir = shift;
 die "must specify directory" unless defined $dir;
 die "specified directory \"$dir\" does not exist or isn't a directory" unless -d $dir;
 
-my $outfile = shift // 'index.html';
+my $outfile = shift // 'picker.html';
 
 chdir($dir) or die "failed to chdir to \"$dir\": $!";
 
 my @origs = ();
-foreach my $svg (<opensuse-*.svgz>) {
-    # opensuse-11.4-600x100.svgz
-    my ($dist, $w, $h) = $svg =~ /^opensuse-(\d+\.\d+)-(\d+)x(\d+)\.svgz$/;
+foreach my $svg (<opensuse-*.svg>) {
+    # opensuse-11.4-600x100.svg
+    my ($dist, $w, $h, $type1, $type2) = $svg =~ /^opensuse-(\d+\.\d+)-(\d+)x(\d+)-?(\w*)-?(\w*)\.svg$/;
+    if ($type1 eq "") {
+        $type1 = "label";
+    }
+    if ($type2 eq "") {
+        $type2 = "default";
+    }
     push(@origs, {
         file => $svg,
         width => $w,
         height => $h,
+        type1 => $type1,
+        type2 => $type2,
     });
 }
 
@@ -60,7 +86,7 @@ my $out;
 if ($outfile eq '-') {
     $out = \*STDOUT;
 } else {
-    open($out, '>', $outfile) or die "failed to create \"$dir/index.html\": $!";
+    open($out, '>', $outfile) or die "failed to create \"$dir/picker.html\": $!";
 }
 print $out <<END;
 <?xml version="1.0" encoding="UTF-8"?>
@@ -69,113 +95,191 @@ print $out <<END;
     <head>
         <title>openSUSE Counter Gallery</title>
         <style type="text/css">
-            body {
-                background: #eee;
-                color: #444;
-                font-family: sans;
-                margin: 0 0 3em 0;
+
+          body {
+            background-color:#f6f6f6;
+            color:#000;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            line-height: 1.5;
+            margin: 0;
+          }
+            
+          header {
+              background: #173f4f;
+              padding: 0.5rem 1rem;
+              position: relative;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              align-items: center;
             }
-            img {
-                border: none;
-                margin: 0;
-                padding: 0;
+            
+          ul {
+              flex-direction: row;
+              display: flex;
+              padding-left: 0;
+              margin: 0;
+              list-style: none;
+              flex-flow: row wrap;
             }
-            p {
-                margin: 0;
-                margin-bottom: 1.5em;
+            
+          ul li {
+              display: block;
+              padding: 0.5em;
             }
-            h1.section {
-                background: #fff;
-                border: 1px solid #444;
-                border-left: none;
-                border-right: none;
-                padding: 0.2em 0.5em 0.2em 3em;
-                margin: 3em 0 0.5em 0;
+            
+          header ul li a {
+              color: rgba(255, 255, 255, 0.5);
+              text-decoration: none;
             }
-            p, h2, ul, dl {
-                margin-left: 5%;
-                margin-right: 5%;
+            
+          header ul li a:hover {
+              color: rgba(255, 255, 255, 0.75);
+              text-decoration: none;
             }
-            dt {
-                font-weight: bold;
-                text-decoration: underline;
+            
+          .geeko {
+              display: inline-block;
+              padding-top: .25rem;
+              padding-bottom: .25rem;
+              margin-right: 1rem;
+              line-height: inherit;
+              white-space: nowrap;
             }
-            p.counters a {
-                display: block;
-                float: left;
-                margin-right: 1.5em;
-                margin-bottom: 3em;
+            
+          header img {
+              height: 2em;
+              margin: 0;
+              width: auto;
+              display: inline-block !important;
+              vertical-align: top !important;
             }
-            h1.section, p {
-                clear: both;
+
+          a {
+            color: #00a489;
+            text-decfont-size: 2.5rem;oration: none;
+          }
+
+          a:hover {
+            color: #005849;
+            text-decoration: none;
+          }
+
+          h1, h2 {
+            font-family: 'Open Sans Condensed';
+          }
+
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          h2 {
+            font-size: 2rem;
+          }
+
+          .container {
+            margin: 1rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+          }
+          
+          dd {
+              display: block;
+width: 100%;
+padding: 0.5rem 0.75rem;
+font-size: 1rem;
+line-height: 1.25;
+color: #464a4c;
+background-color: #fff;
+border: 1px solid #AECFCC;
+border-radius: 0.25rem;
+margin:0;
+          }
+
+          .responsive-image {
+            width: 100%;
+          }
+          .responsive-text {
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            width: calc(100% - 2em);
+            bottom: 0;
+            text-align: center;
+          }
+
+          .responsive-text p {
+            -webkit-box-pack: justify !important;
+            -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            padding: 1em;
+            margin: 0;
+          }
+
+          .responsive-text span {
+            color: #fff;
+          }
+
+          .cell {
+            position: relative;
+          }
+
+          .cell a {
+            padding: 1em 1em 0;
+            display: block;
+          }
+
+          .cell img {
+            display: block;
+          }
+
+          \@media screen and (min-width: 600px) {
+            .grid {
+              display: flex;
+              flex-wrap: wrap;
+              flex-direction: row;
             }
-            caption {
-                padding-top: 0;
-                margin-top: 0;
-                text-align: top right;
+            .cell {
+              width: 50%;
             }
-            #title {
-                text-align: center;
-                background: #fff;
-                border: 1px solid #444;
-                font-size: 200%;
-                font-weight: bold;
-                padding: 0.5em 2em;
-                margin: 1em 0 2em 0;
+          }
+
+          \@media screen and (min-width: 1000px) {
+            .cell {
+              width: calc(100% / 3);
             }
-            ul {
-                margin-top: 0.1em;
-                padding-top: 0;
-            }
-            #index ul {
-                padding: 0;
-            }
-            #index li {
-                display: block;
-                float: left;
-                margin-right: 1em;
-                width: 15m;
-            }
-            #snippet {
-                display: block;
-                background: #fff;
-                border: 1px dashed #444;
-                margin-top: 0.2em;
-                margin-bottom: 0.2em;
-                padding: 0.3em 0.5em;
-                font-family: monospace;
-                font-size: 120%;
-            }
-            h2, .svgs {
-                clear: both;
-            }
-            h2 {
-                font-size: 150%;
-                font-weight: bold;
-                text-decoration: underline;
-                margin-top: 0;
-                margin-bottom: 0;
-                margin-right: 0;
-            }
-            .counters ul {
-                padding-left: 1.5em;
-            }
-            .counters li {
-                padding-left: 0;
-                margin-left: 0;
-            }
-            .counters li {
-                display: inline;
-            }
-            .counters li:before {
-                content: " | ";
-            }
-            .counters li:first-child:before {
-                content: none;
-            }
+          }
+
         </style>
     </head>
     <body>
+        <header>
+            <a class="geeko" href="https://opensuse.org">
+                <img src="https://software.opensuse.org/chameleon/images/logo/logo-white.svg"/>
+            </a>
+            <ul>
+                <li>
+                    <a href="https://software.opensuse.org/search">Software</a>
+                </li>
+                <li>
+                    <a href="https://software.opensuse.org/distributions">Download</a>
+                </li>
+                <li>
+                    <a href="https://doc.opensuse.org">Documentation</a>
+                </li>
+                <li>
+                    <a href="https://en.opensuse.org">Wiki</a>
+                </li>
+                <li>
+                    <a href="https://forum.opensuse.org">Forums</a>
+                </li>
+            </ul>
+        </header>
+        <div class="container">
         <h1 id="title">openSUSE Release Counters</h1>
         <h2>How to</h2>
         <p id="howto">
@@ -183,11 +287,13 @@ print $out <<END;
             the following HTML snippets, depending on the size you want to use:<br/>
             <dl>
             <dt>Large (400x400):</dt>
-            <dd><code id="snippet">&lt;img src="http://counter.opensuse.org/large"/&gt;</code></dd>
+            <dd><code id="snippet">&lt;a href="https://opensuse.org"&gt;&lt;img src="http://counter.opensuse.org/large"/&gt;&lt;/a&gt;</code></dd>
             <dt>Medium (256x256):</dt>
-            <dd><code id="snippet">&lt;img src="http://counter.opensuse.org/medium"/&gt;</code></dd>
+            <dd><code id="snippet">&lt;a href="https://opensuse.org"&gt;&lt;img src="http://counter.opensuse.org/medium"/&gt;&lt;/a&gt;</code></dd>
             <dt>Small (130x130):</dt>
-            <dd><code id="snippet">&lt;img src="http://counter.opensuse.org/small"/&gt;</code></dd>
+            <dd><code id="snippet">&lt;a href="https://opensuse.org"&gt;&lt;img src="http://counter.opensuse.org/small"/&gt;&lt;/a&gt;</code></dd>
+            <dt>Wide (600x100):</dt>
+            <dd><code id="snippet">&lt;a href="https://opensuse.org"&gt;&lt;img src="http://counter.opensuse.org/wide"/&gt;&lt;/a&gt;</code></dd>
             </dl>
         </p>
         <p>
@@ -215,31 +321,35 @@ print $out <<END;
                 <li><quote>Out now!</quote>, or <quote>Available now!</quote></li>
             </ul>
         </p>
+        </div>
 END
 if (scalar(@origs) > 0) {
     print $out <<END;
+        <div class="container">
         <h2>Templates</h2>
         <p>
             <ul>
 END
     foreach (sort { $a->{width} - $b->{width} } @origs) {
-        print $out '                <li><a href="'.$_->{file}.'">'.$_->{width}.'x'.$_->{height}.' (SVG)</a></li>', "\n";
+        print $out '                <li><a href="'.$_->{file}.'">'.$_->{type1}.'-'.$_->{type2}.'-'.$_->{width}.'x'.$_->{height}.' (SVG)</a></li>', "\n";
     }
     print $out <<END;
             </ul>
         </p>
+        </div>
 END
 }
 
 my %bylang = ();
 {
     foreach my $png (<*.png>) {
-        my ($size, $l, $ext) = $png =~ /^([^\.]+)\.([^\.]+)\.([^\.]+)$/;
+        my ($sizetext, $l, $ext) = $png =~ /^([^\.]+)\.([^\.]+)\.([^\.]+)$/;
         my $li = (exists $lang{$l}) ? $lang{$l} : undef;
+        my $size = (exists $sizes{$sizetext}) ? $sizes{$sizetext} : undef;
         $bylang{$l} = [] unless exists $bylang{$l};
         my $a = $bylang{$l};
-        my $r = { file => $png, size => $size, l => $l, li => $li };
-        (my $svg = $png) =~ s/\.png$/.svgz/;
+        my $r = { file => $png, width => $size->[0], height => $size->[1], type => $size->[2], sizetext => $sizetext, l => $l, li => $li };
+        (my $svg = $png) =~ s/\.png$/.svg/;
         $r->{svg} = $svg if -e $svg;
         push(@$a, $r);
     }
@@ -251,7 +361,7 @@ my %oi;
     %oi = map { $_ => $i++ } @order;
 }
 
-print $out '    <div id="index">', "\n";
+print $out '    <div class="container">', "\n";
 print $out '        <h2>Quick jump to language:</h2>', "\n";
 print $out '        <ul>', "\n";
 foreach my $l (sort keys %bylang) {
@@ -269,14 +379,25 @@ foreach my $l (sort keys %bylang) {
     next if scalar(@$pngs) < 1;
     my $li = $pngs->[0]->{li};
     my $h = defined($li) ? (scalar(@$li) > 1 ? $li->[1]." (".$li->[0].")" : $li->[0]) : $l;
-    print $out '        <h1 class="section"><a name="'.$l.'" />'.$h.'</h1>', "\n";
+    print $out '        <h1 class="container" id="'.$l.'">'.$h.'</h1>', "\n";
 
-    print $out '        <p class="counters">',"\n";
+    print $out '        <div class="container grid">',"\n";
     my @svgs = ();
-    foreach my $png (sort { $oi{$a->{size}} - $oi{$b->{size}} } @$pngs) {
-        print $out '            <a href="'.$png->{file}.'">', "\n";
-        print $out '               <img src="'.$png->{file}.'" />', "\n";
-        print $out '            </a>', "\n";
+    foreach my $png (sort { $a->{width} - $b->{width} } @$pngs) {
+        print $out '            <div class="cell">', "\n";
+        print $out '               <a href="'.$png->{file}.'">', "\n";
+        
+        
+        print $out '                  <div class="responsive-text">', "\n";
+        print $out '                     <p>', "\n";
+        print $out '                        <span>'.$png->{width}.'x'.$png->{height}.'</span>', "\n";
+        print $out '                        <span>'.$png->{type}.'</span>', "\n";
+        print $out '                     </p>', "\n";
+        print $out '                  </div>', "\n";
+        print $out '                  <img class="responsive-image" src="'.$png->{file}.'" />', "\n";
+        
+        print $out '               </a>', "\n";
+        print $out '            </div>', "\n";
         push(@svgs, $png) if exists $png->{svg};
     }
     if (scalar(@svgs) > 1) {
@@ -287,7 +408,7 @@ foreach my $l (sort keys %bylang) {
         }
         print $out '            </ul>', "\n";
     }
-    print $out '        </p>',"\n";
+    print $out '        </div>',"\n";
 }
 
 print $out <<END;

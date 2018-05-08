@@ -47,7 +47,11 @@ if [ -n "$RENDER" ]; then
         optipng "$png" &>/dev/null
     done
     popd >/dev/null
-
+    for i in *-label.svg ; do
+        cp $i "$LOCAL"/${i//-label} ;
+    done
+    ./mkhtml.pl "$LOCAL"/
+    
     for f in *.html *.css *.js; do
         [ -e "$f" ] || continue
         cp -a "$f" "$LOCAL/"
