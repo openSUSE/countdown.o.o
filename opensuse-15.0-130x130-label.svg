@@ -1,26 +1,187 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg version="1.1" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
-<g transform="translate(0 -922.36)">
-<rect y="922.36" width="130" height="130" fill="#173f4f" fill-rule="evenodd" style="paint-order:normal"/>
-<flowRoot transform="matrix(.28456 0 0 .28456 74.46 925.03)" fill="#ffffff" font-family="'Open Sans Condensed'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:2.25" xml:space="preserve"><flowRegion font-family="'Open Sans Condensed'" style="line-height:2.25"><rect x="-227.78" y=".029238" width="386.56" height="98.346" fill="#fff"/></flowRegion><flowPara text-align="end" text-anchor="end" style="line-height:2.25">openSUSE.org</flowPara></flowRoot>
-<g transform="matrix(.15408 0 0 .15408 10.089 932.36)" fill="#fff">
-<path d="M 34.526,38.787 59.721,19.179 34.691,0 9.495,19.608 Z"/>
-<path d="M 34.548,46.15 6.683,24.798 0,29.999 34.961,56.788 69.652,29.79 62.556,24.354 Z"/>
-</g>
-<flowRoot transform="matrix(.30377 0 0 .30377 10.704 951.95)" fill="#ffffff" font-family="'Strenuous 3D'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion fill="#ffffff"><rect x="-2.3168" y="-2.7462" width="362.12" height="59" fill="#fff"/></flowRegion><flowPara font-family="'Source Sans Pro'" font-weight="300" text-align="center" text-anchor="middle">@TOPC@</flowPara></flowRoot>
-<flowRoot transform="matrix(.30377 0 0 .30377 10.358 963.28)" fill="#ffffff" font-family="'Strenuous 3D'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion fill="#ffffff"><rect x="-1.177" y="-2.7462" width="362.12" height="61.494" fill="#fff"/></flowRegion><flowPara font-family="'Source Sans Pro'" font-weight="300" text-align="center" text-anchor="middle">@TOP@</flowPara></flowRoot>
-<flowRoot transform="matrix(.81782 0 0 .81782 -81.526 971.58)" fill="#73ba25" font-family="'Strenuous 3D'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion><rect x="111.91" y=".73575" width="134.5" height="55.679" fill="#73ba25"/></flowRegion><flowPara font-family="'Source Sans Pro'" text-align="center" text-anchor="middle">@@</flowPara></flowRoot>
-<flowRoot transform="matrix(.30377 0 0 .30377 11.422 1010)" fill="#ffffff" font-family="'Strenuous 3D'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion fill="#ffffff"><rect x="-4.6815" y="-5.0976" width="362.12" height="56.649" fill="#fff"/></flowRegion><flowPara font-family="'Source Sans Pro'" font-weight="600" text-align="center" text-anchor="middle">@BOTTOM@</flowPara></flowRoot>
-<flowRoot transform="matrix(.30377 0 0 .30377 11.076 1021.3)" fill="#ffffff" font-family="'Strenuous 3D'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><flowRegion fill="#ffffff"><rect x="-3.5416" y="-.39472" width="362.12" height="56.791" fill="#fff"/></flowRegion><flowPara font-family="'Source Sans Pro'" font-weight="600" text-align="center" text-anchor="middle">@BOTTOMC@</flowPara></flowRoot>
-</g>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 130 130"
+   id="svg62"
+   sodipodi:docname="opensuse-15.0-130x130-label.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs66" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     id="namedview64"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="2.5673415"
+     inkscape:cx="50.518911"
+     inkscape:cy="59.725504"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g60" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0 -922.36)"
+     id="g60">
+    <rect
+       y="922.36"
+       width="130"
+       height="130"
+       fill="#173f4f"
+       fill-rule="evenodd"
+       style="paint-order:normal"
+       id="rect4" />
+    <flowRoot
+       transform="matrix(0.28455986,0,0,0.28456,75.441759,1026.0931)"
+       font-size="40px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:40px;line-height:2.25;font-family:'Open Sans Condensed';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+       xml:space="preserve"
+       id="flowRoot12"><flowRegion
+         style="line-height:2.25;font-family:'Open Sans Condensed'"
+         id="flowRegion8"><rect
+           x="-227.78"
+           y="0.029238001"
+           width="386.56"
+           height="98.346001"
+           id="rect6"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         text-align="end"
+         style="font-size:32.79918289px;line-height:2.25;text-align:end;text-anchor:end"
+         id="flowPara10">openSUSE.org</flowPara></flowRoot>    <g
+       transform="matrix(.15408 0 0 .15408 10.089 932.36)"
+       fill="#fff"
+       id="g18">
+      <path
+         d="M 34.526,38.787 59.721,19.179 34.691,0 9.495,19.608 Z"
+         id="path14" />
+      <path
+         d="M 34.548,46.15 6.683,24.798 0,29.999 34.961,56.788 69.652,29.79 62.556,24.354 Z"
+         id="path16" />
+    </g>
+    <flowRoot
+       transform="matrix(0.30377,0,0,0.30377,10.704,945.95026)"
+       font-size="40px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:40px;line-height:1.25;font-family:'Strenuous 3D';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+       xml:space="preserve"
+       id="flowRoot26"><flowRegion
+         id="flowRegion22"
+         style="fill:#ffffff"><rect
+           x="-2.3168001"
+           y="-2.7462001"
+           width="362.12"
+           height="59"
+           id="rect20"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         font-weight="300"
+         text-align="center"
+         id="flowPara24"
+         style="font-weight:300;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@TOPC@</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.30377,0,0,0.30377,10.358,957.28026)"
+       font-size="40px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:40px;line-height:1.25;font-family:'Strenuous 3D';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+       xml:space="preserve"
+       id="flowRoot34"><flowRegion
+         id="flowRegion30"
+         style="fill:#ffffff"><rect
+           x="-1.177"
+           y="-2.7462001"
+           width="362.12"
+           height="61.493999"
+           id="rect28"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         font-weight="300"
+         text-align="center"
+         id="flowPara32"
+         style="font-weight:300;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@TOP@</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.81782,0,0,0.81782,-81.526,965.58026)"
+       font-size="40px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:40px;line-height:1.25;font-family:'Strenuous 3D';letter-spacing:0px;word-spacing:0px;fill:#73ba25"
+       xml:space="preserve"
+       id="flowRoot42"><flowRegion
+         id="flowRegion38"><rect
+           x="111.91"
+           y="0.73575002"
+           width="134.5"
+           height="55.679001"
+           id="rect36"
+           style="fill:#73ba25" /></flowRegion><flowPara
+         text-align="center"
+         id="flowPara40"
+         style="font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@@</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.30377,0,0,0.30377,11.422,1004.0002)"
+       font-size="40px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:40px;line-height:1.25;font-family:'Strenuous 3D';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+       xml:space="preserve"
+       id="flowRoot50"><flowRegion
+         id="flowRegion46"
+         style="fill:#ffffff"><rect
+           x="-4.6815"
+           y="-5.0976"
+           width="362.12"
+           height="56.648998"
+           id="rect44"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         font-weight="600"
+         text-align="center"
+         id="flowPara48"
+         style="font-weight:600;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@BOTTOM@</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.30377,0,0,0.30377,11.076,1015.3002)"
+       font-size="40px"
+       letter-spacing="0px"
+       word-spacing="0px"
+       style="font-size:40px;line-height:1.25;font-family:'Strenuous 3D';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+       xml:space="preserve"
+       id="flowRoot58"><flowRegion
+         id="flowRegion54"
+         style="fill:#ffffff"><rect
+           x="-3.5416"
+           y="-0.39471999"
+           width="362.12"
+           height="56.791"
+           id="rect52"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         font-weight="600"
+         text-align="center"
+         id="flowPara56"
+         style="font-weight:600;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@BOTTOMC@</flowPara></flowRoot>  </g>
 </svg>
