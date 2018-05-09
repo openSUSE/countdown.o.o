@@ -21,10 +21,10 @@ import atexit
 # VERSION should be a release number or "conference" as in the following examples:
 # VERSION = "13.2"
 # VERSION = "conference"
-VERSION = "42.3"
+VERSION = "15.0"
 
 # UTC timestamp!
-RELEASE = datetime.datetime(2017, 07, 26, 12, 0, 0)
+RELEASE = datetime.datetime(2018, 05, 25, 12, 0, 0)
 
 
 VARIANTS = ["label", "nolabel"]
@@ -69,6 +69,36 @@ def msg_sk(n):
     else:
         post = u'dní'
     return u'Už len', post
+
+def msg_pl(n):
+    if n == 1:
+        post = u'godzinę'
+    elif n <= 4:
+        post = u'godziny'
+    else:
+        post = u'godzin'
+    return u'Dostępne za', post
+
+def msg_pl_days(n):
+    if n == 1:
+        pre = u'Pozostał tylko'
+        post = u'dzień'
+    elif n <= 4:
+        pre = u'Pozostały tylko'
+        post = u'dni'
+    else:
+        pre = u'Pozostało tylko'
+        post = u'dni'
+    return u'Dostępne za', post
+
+def msg_pl_conference(n):
+    if n == 1:
+        post = u'godzinę'
+    elif n <= 4:
+        post = u'godziny'
+    else:
+        post = u'godzin'
+    return u'Zaczyna się za', post
 
 def msg_lt(n):
     if (n % 10 == 1) and (n != 11):
@@ -119,6 +149,7 @@ if VERSION == "conference":
         'nn': [u'Begynner om', [u'timar!', u'time!']],
         'lt': [u'Prasidės po', [u'val.!', u'val.!']],
         'zh': [u'将在', [u'小时后开始！', u'小时后开始！']],
+        'pl': msg_pl_conference,
          }
 else:
     avail = {
@@ -152,6 +183,8 @@ else:
         'lt': u'Išleista!',
         'tr': u'Çıktı!',
         'zh': u'现已发布！',
+        'pl': u'Dostępne\nteraz!',
+        'af': u'Nou\nbeskikbaar!'
         }
 
     almost = {
@@ -165,6 +198,8 @@ else:
         'lt': [u'Pasirodys po', [u'val.', u'val.']],
         'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
         'zh': [u'', [u'小时后发布！', u'小时后发布！']],
+        'af': [u'Net', [u'uur bly!', u'ure bly!']],
+        'pl': msg_pl,
         }
 
 m = {
@@ -197,6 +232,8 @@ m = {
         'lt': msg_lt,
         'tr': [u'', u'gün kaldı'],
         'zh': [u'仅剩', u'天'],
+        'pl': msg_pl_days,
+        'af': [u'Net', u'dae bly', u'Net', u'dag bly'],
 }
 
 extra = {
@@ -209,16 +246,15 @@ extra = {
 }
 
 font_override = {
-        'tw': 'Droid Sans Fallback',
-        #'ja': 'Droid Sans Fallback',
-        'ja': 'IPAGothic',
-        #'cn': "AR PL SungtiL GB",
-        #'tw': "AR PL KaitiM Big5",
-        'zh': 'Droid Sans Fallback',
+        'tw': 'Noto Sans TC',
+        'ja': 'Noto Sans JP',
+        'cn': "Noto Sans SC",
+        'zh': 'Noto Sans SC',
+        'kr': 'Noto Sans KR',
         }
 
-font_to_replace = u'DejaVu Sans'
-default_font = 'FifthLeg'
+font_to_replace = u'Source Sans Pro'
+default_font = 'Source Sans Pro'
 
 if len(args) >= 2:
     outdir = args[1]
