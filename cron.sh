@@ -4,7 +4,7 @@ BASEDIR="/home/counter.opensuse.org/svg"
 LOCAL="/home/counter.opensuse.org/output"
 BINARY_LOCATION="https://raw.github.com/openSUSE/artwork/master/Marketing%20Materials/Events/openSUSE%20Conference/2013-oS-Conference/countdown-banner"
 BINARY_FINAL_DATE=$(date -d "2014-11-04" +%s)
-REMOTE_LOCATION="counter.o.o:/srv/www/vhosts/0b965c33b89fac9ea53708de378f93dcda084d34/opensuse.org/counter/htdocs"
+REMOTE_LOCATION="rsync://community.infra.opensuse.org/countdown"
 
 set -e
 
@@ -60,7 +60,10 @@ if [ -n "$RENDER" ]; then
     shopt -s nullglob
     copied=
         for i in *-label*.png ; do
-            ln -s $i ${i//-label} ;
+            j=${i//-label}
+            if [ ! -e $j ] ; then
+              ln -s $i ${i//-label} ;
+            fi
             copied=1
         done
     shopt -u nullglob
@@ -89,6 +92,9 @@ fi
 
 if [ -n "$REMOTE" ]; then
     RSFLAGS=""
+    if [ -e ~/.rsync_pass ] ; then
+      source ~/.rsync_pass
+    fi
     [ -n "$VERBOSE" ] && RSFLAGS="$RSFLAGS -v"
     rsync -ap --delete-after $RSFLAGS "$LOCAL/" "$REMOTE_LOCATION/"
 fi
