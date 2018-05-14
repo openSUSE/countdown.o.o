@@ -36,7 +36,7 @@ my %lang = (
     'lt' => [ 'Lithuania' ],
     'tr' => [ 'Turkish' ],
     'zh' => [ 'Mandarin' ],
-    'af' => [ 'Africaans' ],
+    'af' => [ 'Afrikaans' ],
 );
 
 my %sizes = (
