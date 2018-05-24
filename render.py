@@ -199,7 +199,7 @@ else:
         'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
         'zh': [u'', [u'小时后发布！', u'小时后发布！']],
         'af': [u'Net', [u'uur bly!', u'ure bly!']],
-        'pl': msg_pl,
+#        'pl': msg_pl,
         }
 
 m = {
