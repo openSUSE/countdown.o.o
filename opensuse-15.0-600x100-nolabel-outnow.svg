@@ -1,22 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg version="1.1" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
-<g transform="translate(0 -952.36)">
-<rect y="952.36" width="600" height="100" fill="#173f4f" fill-rule="evenodd" style="paint-order:normal"/>
-<flowRoot transform="matrix(.9457 0 0 .9457 237.14 975.86)" fill="#ffffff" font-family="'Open Sans Condensed'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:2.25" xml:space="preserve"><flowRegion font-family="'Open Sans Condensed'" style="line-height:2.25"><rect x="-162.39" y="-5.7761" width="162.01" height="88.37" fill="#fff"/></flowRegion><flowPara style="line-height:2.25">Leap ##.#</flowPara></flowRoot>
-<g transform="matrix(.7611 0 0 .7611 20 981.38)" fill="#fff">
-<path d="M 34.526,38.787 59.721,19.179 34.691,0 9.495,19.608 Z"/>
-<path d="M 34.548,46.15 6.683,24.798 0,29.999 34.961,56.788 69.652,29.79 62.556,24.354 Z"/>
-</g>
-<flowRoot transform="matrix(.42655 0 0 .42655 172.84 966.8)" fill="#ffffff" font-family="'Open Sans Condensed'" font-size="40px" letter-spacing="0px" word-spacing="0px" style="line-height:2.25" xml:space="preserve"><flowRegion font-family="'Open Sans Condensed'" style="line-height:2.25"><rect x="-205.32" y="1.9158" width="340.52" height="188.7" fill="#fff"/></flowRegion><flowPara style="line-height:2.25">openSUSE</flowPara></flowRoot>
-</g>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 600 100"
+   id="svg30"
+   sodipodi:docname="opensuse-15.0-600x100-nolabel-outnow.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs34" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     id="namedview32"
+     showgrid="false"
+     inkscape:zoom="1.0508148"
+     inkscape:cx="239.53725"
+     inkscape:cy="36.093542"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg30" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-952.35999)"
+     id="g44">
+    <rect
+       x="0"
+       y="952.35999"
+       width="600"
+       height="100"
+       style="fill:#173f4f;fill-rule:evenodd;paint-order:normal"
+       id="rect4" />
+    <g
+       style="fill:#ffffff"
+       transform="matrix(0.7611,0,0,0.7611,20,981.38)"
+       id="g18">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 34.526,38.787 59.721,19.179 34.691,0 9.495,19.608 Z"
+         id="path14" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M 34.548,46.15 6.683,24.798 0,29.999 34.961,56.788 69.652,29.79 62.556,24.354 Z"
+         id="path16" />
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:38.00515366px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.95012885"
+     x="83.961021"
+     y="70.075752"
+     id="text866"><tspan
+       sodipodi:role="line"
+       id="tspan864"
+       x="83.961021"
+       y="70.075752"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff;fill-opacity:1;stroke-width:0.95012885">Leap ##.#</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:16.97309303px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.42432731"
+     x="85.282585"
+     y="39.165852"
+     id="text862"><tspan
+       sodipodi:role="line"
+       id="tspan860"
+       x="85.282585"
+       y="39.165852"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff;fill-opacity:1;stroke-width:0.42432731">openSUSE</tspan></text>
 </svg>
