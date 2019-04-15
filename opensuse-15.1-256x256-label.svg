@@ -12,8 +12,8 @@
    version="1.1"
    viewBox="0 0 256 256"
    id="svg62"
-   sodipodi:docname="opensuse-15.0-256x256-label.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   sodipodi:docname="opensuse-15.1-256x256-label.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs66" />
   <sodipodi:namedview
@@ -26,14 +26,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
-     inkscape:window-height="713"
+     inkscape:window-height="715"
      id="namedview64"
      showgrid="false"
      inkscape:zoom="0.921875"
-     inkscape:cx="128"
+     inkscape:cx="109.01695"
      inkscape:cy="128"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg62" />
   <metadata
@@ -179,4 +179,22 @@
        font-weight="600"
        text-align="center"
        id="flowPara56"
-       style="font-weight:600;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@BOTTOMC@</flowPara></flowRoot></svg>
+       style="font-weight:600;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@BOTTOMC@</flowPara></flowRoot>  <flowRoot
+     transform="matrix(0.56037,0,0,0.56037,150.81449,2.779361)"
+     font-size="40px"
+     letter-spacing="0px"
+     word-spacing="0px"
+     style="font-size:40px;line-height:2.25;font-family:'Open Sans Condensed';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+     xml:space="preserve"
+     id="flowRoot12-3"><flowRegion
+       style="line-height:2.25;font-family:'Open Sans Condensed'"
+       id="flowRegion8-6"><rect
+         style="fill:#ffffff"
+         x="-227.78"
+         y="0.029238001"
+         width="386.56"
+         height="98.346001"
+         id="rect6-7" /></flowRegion><flowPara
+       text-align="end"
+       style="line-height:2.25;text-align:end;text-anchor:end"
+       id="flowPara10-5">openSUSE Leap ##.#</flowPara></flowRoot></svg>

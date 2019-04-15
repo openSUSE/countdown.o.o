@@ -12,8 +12,8 @@
    version="1.1"
    viewBox="0 0 130 130"
    id="svg62"
-   sodipodi:docname="opensuse-15.0-130x130-label.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   sodipodi:docname="opensuse-15.1-130x130-label.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <defs
      id="defs66" />
   <sodipodi:namedview
@@ -26,16 +26,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1366"
-     inkscape:window-height="713"
+     inkscape:window-height="715"
      id="namedview64"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="2.5673415"
-     inkscape:cx="50.518911"
+     inkscape:cx="43.702521"
      inkscape:cy="59.725504"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="g60" />
   <metadata
@@ -183,5 +183,23 @@
          font-weight="600"
          text-align="center"
          id="flowPara56"
-         style="font-weight:600;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@BOTTOMC@</flowPara></flowRoot>  </g>
+         style="font-weight:600;font-family:'Source Sans Pro';text-align:center;text-anchor:middle">@BOTTOMC@</flowPara></flowRoot>    <flowRoot
+       id="flowRoot12-3"
+       xml:space="preserve"
+       style="font-size:40px;line-height:2.25;font-family:'Open Sans Condensed';letter-spacing:0px;word-spacing:0px;fill:#ffffff"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="40px"
+       transform="matrix(0.28456,0,0,0.28456,76.951946,922.94874)"><flowRegion
+         id="flowRegion8-6"
+         style="line-height:2.25;font-family:'Open Sans Condensed'"><rect
+           style="fill:#ffffff"
+           id="rect6-7"
+           height="98.346001"
+           width="386.56"
+           y="0.029238001"
+           x="-227.78" /></flowRegion><flowPara
+         id="flowPara10-5"
+         style="line-height:2.25;text-align:end;text-anchor:end"
+         text-align="end">openSUSE Leap ##.#</flowPara></flowRoot>  </g>
 </svg>

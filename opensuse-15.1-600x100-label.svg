@@ -5,9 +5,33 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg60"
    viewBox="0 0 600 100"
-   version="1.1">
+   version="1.1"
+   sodipodi:docname="opensuse-15.1-600x100-label.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview31"
+     showgrid="false"
+     inkscape:zoom="0.71333333"
+     inkscape:cx="275.46729"
+     inkscape:cy="50"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg60" />
   <defs
      id="defs64" />
   <metadata
@@ -18,7 +42,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -31,12 +55,12 @@
      width="600" />
   <text
      id="text876"
-     y="56.788246"
+     y="40.788246"
      x="83.925041"
      style="font-style:normal;font-weight:normal;font-size:17.00905228px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4252263"
      xml:space="preserve"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff;fill-opacity:1;stroke-width:0.4252263"
-       y="56.788246"
+       y="40.788246"
        x="83.925041"
        id="tspan874">openSUSE.org</tspan></text>
   <path
@@ -145,4 +169,14 @@
          text-align="center"
          font-weight="600"
          font-family="'Source Sans Pro'">@BOTTOMC@</flowPara></flowRoot>  </g>
+  <text
+     id="text866"
+     y="79.560989"
+     x="81.433167"
+     style="font-style:normal;font-weight:normal;font-size:38.00515366px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.95012885"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff;fill-opacity:1;stroke-width:0.95012885"
+       y="79.560989"
+       x="81.433167"
+       id="tspan864">Leap ##.#</tspan></text>
 </svg>
