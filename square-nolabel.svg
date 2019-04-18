@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130"> 
+<rect y="0" width="130" height="130" style="fill:#173f4f" x="0" /> 
+<path d="M 63.614007,49.637922 82.866011,34.655057 63.740087,20 44.487319,34.982865 Z" style="fill:#ffffff" /> 
+<path d="M 63.630818,55.264138 42.338614,38.948648 37.232,42.922836 63.946399,63.392847 90.454486,42.763135 85.032291,38.609378 Z" style="fill:#ffffff" /> 
+<text y="82" x="28" style="font-size:10.66666666px;text-align:start;text-anchor:start;fill:#ffffff" xml:space="preserve"><tspan style="font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff" y="82" x="28" >openSUSE</tspan></text> 
+<text y="104" x="24" style="font-size:24px;text-align:start;text-anchor:start" xml:space="preserve"><tspan y="114" x="24" /></text> 
+<text y="104" x="24" style="font-size:10.66666666px;text-align:center;text-anchor:middle" xml:space="preserve"><tspan y="114" x="24" /></text> 
+<text y="104" x="27" style="font-size:10.66666666px;text-align:start;text-anchor:start;fill:#ffffff" xml:space="preserve"><tspan style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:condensed;font-size:24px;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, Light Condensed';fill:#ffffff" y="104" x="27" >Leap ##.#</tspan></text>
+</svg>

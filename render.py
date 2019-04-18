@@ -4,8 +4,6 @@
 #
 # Release countdown banner generation script
 # by Pascal Bleser <pascal.bleser@opensuse.org>
-# Artwork by jimmac
-# Artwork for Leap 42.3 by Victorhck
 
 import sys
 import datetime
@@ -33,7 +31,7 @@ VARIANTS = ["label", "nolabel"]
 
 PREFIX = "opensuse-%s" % VERSION
 # dimensions are tuples of (width,height,name)
-sizes = [(600,100,"wide"), (400,400,"large"), (256,256,"medium"), (130,130,"small")]
+sizes = [(600,100,"wide","wide"), (400,400,"large","square"), (256,256,"medium","square"), (130,130,"small","square")]
 varlist = [""] + ["-%s" % (x) for x in VARIANTS]
 
 options = None
@@ -334,14 +332,14 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
         for var in varlist:
             if template_variant == None:
                 if t != None:
-                    template = "%s-%dx%d%s%s.svg" % (PREFIX, size[0], size[1], var, t)
+                    template = "%s%s%s.svg" % (size[3], var, t)
                 if t == None or not os.path.exists(template):
-                    template = "%s-%dx%d%s.svg" % (PREFIX, size[0], size[1], var)
+                    template = "%s%s.svg" % (size[3], var)
             else:
                 if t != None:
-                    template = "%s-%dx%d%s%s-%s.svg" % (PREFIX, size[0], size[1], var, t, template_variant)
+                    template = "%s%s%s-%s.svg" % (size[3], var, t, template_variant)
                 if t == None or not os.path.exists(template):
-                    template = "%s-%dx%d%s-%s.svg" % (PREFIX, size[0], size[1], var, template_variant)
+                    template = "%s%s-%s.svg" % (size[3], var, template_variant)
                 pass
 
             if not os.path.exists(template):
