@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130" preserveAspectRatio ="xMinYMin slice">
   <rect style="fill:#173f4f" height="130" width="130" y="0" x="0" />
   <path d="M 16.079806,16.83014 20.516482,13.377298 16.108861,10 11.672008,13.452842 Z" style="fill:#ffffff" />
   <path d="M 16.08368,18.126717 11.176833,14.366768 10,15.28263 16.156406,20 22.265267,15.245826 21.015708,14.288582 Z" style="fill:#ffffff" />
   <text xml:space="preserve" style="text-align:center;text-anchor:middle" x="65" y="65"><tspan x="65" y="65" style="font-size:10.66666666px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#f9f9f9">@TOP@</tspan></text>
-  <text xml:space="preserve" style="text-align:center;text-anchor:middle" x="65" y="77"><tspan x="65" y="77" style="font-size:10.66666666px;font-weight:bold;fill:#ffffff">@BOTTOM@</tspan></text>
+  <text xml:space="preserve" style="text-align:center;text-anchor:middle" x="65" y="77"><tspan x="65" y="77" style="font-size:10.66666666px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#ffffff;font-weight:bold">@BOTTOM@</tspan></text>
   <text xml:space="preserve" style="text-align:start;text-anchor:start;fill:#ffffff" x="26" y="19"><tspan x="26" y="19" style="font-weight:bold;font-stretch:condensed;font-size:10.66666666px;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, Bold Condensed';text-align:start;text-anchor:start;fill:#ffffff">openSUSE Leap ##.#</tspan></text>
   <text y="120" x="120" style="font-size:9.33333333px;text-align:end;text-anchor:end" xml:space="preserve"><tspan style="font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#ffffff" y="120" x="120">openSUSE.org</tspan></text>
 </svg>

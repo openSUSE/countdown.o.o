@@ -380,7 +380,7 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
 
 	    rc = call_render(workfile, outfile, size[0], size[1])
             if options.keep:
-                svg_outfile = "%s/%s%s.%s.%s.svg" % (outdir, PREFIX, var, size[2], lang)
+                svg_outfile = "%s/%s%s.%s.svg" % (outdir, size[3], var, lang)
                 shutil.copyfile(workfile, svg_outfile)
                 if options.verbose:
                     print "SVG saved as %s" % svg_outfile

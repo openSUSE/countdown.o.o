@@ -40,7 +40,7 @@ mkdir -p "$LOCAL"
 
 if [ -n "$RENDER" ]; then
     cd "$BASEDIR"
-    ./render.py $RFLAGS "$LOCAL"/ || exit 1
+    ./render.py $RFLAGS -k "$LOCAL"/ || exit 1
     pushd "$LOCAL" >/dev/null
     find . -maxdepth 1 -type f -name '*.png' | while read png; do
 	[ -n "$VERBOSE" ] && echo "optipng $png"

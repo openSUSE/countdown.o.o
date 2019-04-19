@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130"> 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130" preserveAspectRatio ="xMinYMin slice"> 
 <rect y="0" width="130" height="130" style="fill:#173f4f" x="0" /> 
 <path d="M 63.614007,49.637922 82.866011,34.655057 63.740087,20 44.487319,34.982865 Z" style="fill:#ffffff" /> 
 <path d="M 63.630818,55.264138 42.338614,38.948648 37.232,42.922836 63.946399,63.392847 90.454486,42.763135 85.032291,38.609378 Z" style="fill:#ffffff" /> 
