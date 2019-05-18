@@ -405,7 +405,9 @@ foreach my $l (sort keys %bylang) {
         print $out '            <h2>SVGs:</h2>', "\n";
         print $out '            <ul class="svgs">', "\n";
         foreach (@svgs) {
-            print $out '               <li><a href="'.$_->{svg}.'">'.$_->{size}.'</a></li>', "\n";
+            # print $out '               <li><a href="'.$_->{svg}.'">'.$_->{size}.'</a></li>', "\n";
+            # the second $_->{svg} is not really correct, but at least it displays a link instead of an error message ("Use of uninitialized value in concatenation (.) or string at ./mkhtml.pl line 408.")
+            print $out '               <li><a href="'.$_->{svg}.'">'.$_->{svg}.'</a></li>', "\n";
         }
         print $out '            </ul>', "\n";
     }
