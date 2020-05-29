@@ -22,7 +22,7 @@ import atexit
 VERSION = "15.2"
 
 # UTC timestamp!
-RELEASE = datetime.datetime(2020, 06, 25, 12, 0, 0)
+RELEASE = datetime.datetime(2020, 07, 02, 12, 0, 0)
 
 
 VARIANTS = ["label", "nolabel"]
