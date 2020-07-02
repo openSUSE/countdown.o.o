@@ -246,6 +246,7 @@ extra = {
         },
 }
 
+# when adding or changing fonts, please mail admin@o.o to ensure these fonts get installed on the server
 font_override = {
         'tw': 'Noto Sans TC',
         'ja': 'Noto Sans JP',
