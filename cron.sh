@@ -31,7 +31,7 @@ if [ -n "$GIT_PULL" ]; then
     cd "$BASEDIR"
     GFLAGS=""
     [ -n "$VERBOSE" ] && GFLAGS="$GFLAGS --verbose"
-    git pull --ff-only $GFLAGS
+    git pull -q --ff-only $GFLAGS
 fi
 
 
