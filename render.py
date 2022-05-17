@@ -19,10 +19,10 @@ import atexit
 # VERSION should be a release number or "conference" as in the following examples:
 # VERSION = "13.2"
 # VERSION = "conference"
-VERSION = "15.3"
+VERSION = "15.4"
 
 # UTC timestamp!
-RELEASE = datetime.datetime(2021, 06, 02, 12, 0, 0)
+RELEASE = datetime.datetime(2022, 06, 08, 12, 0, 0)
 
 
 VARIANTS = ["label", "nolabel"]
