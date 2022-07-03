@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # vim: set sw=4 ts=4 et:
 #
@@ -8,9 +8,9 @@
 import sys
 import datetime
 import fileinput
+from functools import reduce
 from optparse import OptionParser
 import os
-import re
 import subprocess
 import tempfile
 import shutil
@@ -138,7 +138,7 @@ if VERSION == "conference":
         'it': [u'Comincia tra', [u'ore!', u'ora!']],
         'uk': [u'Розпочнеться через', [u'годин!', u'годину!']],
         'ru': [u'Начнётся через', [u'часов!', u'час!']],
-	'pt': [u'Começa em', [u'horas!', u'hora!']],
+        'pt': [u'Começa em', [u'horas!', u'hora!']],
         'pt_BR': [u'Começa em', [u'horas!', u'hora!']],
         'el': [u'Ξεκινά σε', [u'ώρα!', u'ώρες!']],
         'es': [u'¡Empieza en', [u'horas!', u'hora!']],
@@ -194,8 +194,8 @@ else:
         'it': [u'Disponibile in', [u'ore!', u'ora!']],
         'da': [u'Udgives om', [u'timer!', u'time!']],
         'es': [u'¡Disponible en', [u'horas!', u'hora!']],
-	'pt': [u'Disponível em', [u'horas!', u'hora!']],
-	'pt_BR': [u'Disponível em', [u'horas!', u'hora!']],
+        'pt': [u'Disponível em', [u'horas!', u'hora!']],
+        'pt_BR': [u'Disponível em', [u'horas!', u'hora!']],
         'lt': [u'Pasirodys po', [u'val.', u'val.']],
         'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
         'zh': [u'', [u'小时后发布！', u'小时后发布！']],
@@ -267,7 +267,7 @@ else:
 if len(options.lang) > 0:
     languages = options.lang
 else:
-    languages = list(set(m.keys() + avail.keys()))
+    languages = list(m.keys()) + list(avail.keys())
     pass
 
 if options.forced_days != None:
@@ -308,13 +308,13 @@ def call_render(workfile, outfile, width, height):
 
 
 def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_variant=None):
-    x = unicode(center).encode('ascii', 'xmlcharrefreplace')
-    y = unicode(top1).encode('ascii', 'xmlcharrefreplace')
-    yy = unicode(top2).encode('ascii', 'xmlcharrefreplace')
-    z = unicode(bottom1).encode('ascii', 'xmlcharrefreplace')
-    zz = unicode(bottom2).encode('ascii', 'xmlcharrefreplace')
-    ly = reduce(lambda x,y: sjoin(x, u" ", y), [y, yy])
-    lz = reduce(lambda x,y: sjoin(x, u" ", y), [z, zz])
+    x = str(center).encode('ascii', 'xmlcharrefreplace')
+    y = str(top1).encode('ascii', 'xmlcharrefreplace')
+    yy = str(top2).encode('ascii', 'xmlcharrefreplace')
+    z = str(bottom1).encode('ascii', 'xmlcharrefreplace')
+    zz = str(bottom2).encode('ascii', 'xmlcharrefreplace')
+    ly = reduce(lambda x,y: sjoin(x, " ".encode('ascii'), y), [y, yy])
+    lz = reduce(lambda x,y: sjoin(x, " ".encode('ascii'), y), [z, zz])
 
     font_repl = None
     if truelang in font_override:
@@ -348,57 +348,56 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
 
             if not os.path.exists(template):
                 if options.verbose:
-                    print "skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template)
+                    print("skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template))
                     pass
                 if var:
-                    print >>sys.stderr, "Needed template \"%s\" is missing. Aborting" % (template)
+                    print("Needed template \"%s\" is missing. Aborting" % (template), file=sys.stderr)
                     sys.exit(1)
                 continue
 
             outfile = "%s/%s%s.%s.png" % (outdir, size[2], var, lang)
 
             if options.verbose:
-                print "%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile)
+                print("%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile))
                 pass
 
             workfile = os.path.join(workdir, "work.svg")
             out = open(workfile, "wb")
             for line in fileinput.FileInput(template, mode="rb"):
-                line = unicode(line)
-                line = line.replace(u"@@", x).replace(u"@TOPC@", y).replace(u"@TOP@", yy).replace(u"@BOTTOM@", z).replace(u"@BOTTOMC@", zz)
-                line = line.replace(u"@_TOP_@", ly).replace(u"@_BOTTOM_@", lz)
-                line = line.replace(u"##.#", VERSION)
+                line = line.replace(b"@@", x).replace(b"@TOPC@", y).replace(b"@TOP@", yy).replace(b"@BOTTOM@", z).replace(b"@BOTTOMC@", zz)
+                line = line.replace(b"@_TOP_@", ly).replace(b"@_BOTTOM_@", lz)
+                line = line.replace(b"##.#", VERSION.encode('ascii', 'xmlcharrefreplace'))
 
                 if lang in extra:
-                    for s, r in extra[lang].iteritems():
-                        line = line.replace(s, unicode(r).encode('ascii', 'xmlcharrefreplace'))
+                    for s, r in extra[lang].items():
+                        line = line.replace(s.encode('ascii', 'xmlcharrefreplace'), str(r).encode('ascii', 'xmlcharrefreplace'))
                         pass
                     pass
 
                 if font_repl != None:
-                    line = line.replace(font_to_replace, unicode(font_repl))
+                    line = line.replace(font_to_replace.encode('ascii', 'xmlcharrefreplace'), font_repl.encode('ascii', 'xmlcharrefreplace'))
                     pass
                 out.write(line)
                 pass
             out.close()
 
-	    rc = call_render(workfile, outfile, size[0], size[1])
+            rc = call_render(workfile, outfile, size[0], size[1])
             if options.keep:
                 svg_outfile = "%s/%s%s.%s.svg" % (outdir, size[3], var, lang)
                 shutil.copyfile(workfile, svg_outfile)
                 if options.verbose:
-                    print "SVG saved as %s" % svg_outfile
+                    print("SVG saved as %s" % svg_outfile)
                     pass
                 pass
 
             if rc != 0:
-                print >>sys.stderr, "ERROR: call to inkscape failed for %s" % workfile
+                print("ERROR: call to inkscape failed for %s" % workfile, file=sys.stderr)
             pass
         pass
     pass
 
 if options.verbose:
-    print "days: %d" % (days)
+    print("days: %d" % (days))
     pass
 
 if not os.path.exists(outdir):
@@ -434,7 +433,7 @@ elif days <= 0:
         if not lang in languages:
             continue
 
-        if avail.has_key(lang):
+        if avail.get(lang):
             text = avail[lang]
         else:
             text = avail['en']
@@ -491,7 +490,7 @@ else:
                 pass
             pass
         else:
-            print >>sys.stderr, "unsupported msg: %s" % msg
+            print("unsupported msg: %s" % msg, file=sys.stderr)
             sys.exit(1)
             pass
 
