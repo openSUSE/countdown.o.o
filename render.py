@@ -50,199 +50,199 @@ if len(options.sizes) == 0:
 
 def msg_ru(n):
     if (n != 11) and (n % 10 == 1):
-        pre = u'Остался'
+        pre = 'Остался'
     else:
-        pre = u'Осталось'
+        pre = 'Осталось'
     if n % 10 == 1 and n % 100 != 11:
-        return pre, u'день'
+        return pre, 'день'
     if n % 10 >= 2 and n % 10 <= 4 and (n % 100 < 10 or n % 100 >= 20):
-        return pre, u'дня'
-    return pre, u'дней'
+        return pre, 'дня'
+    return pre, 'дней'
 
 def msg_sk(n):
     if n == 1:
-        post = u'deň'
+        post = 'deň'
     elif n <= 4:
-        post = u'dni'
+        post = 'dni'
     else:
-        post = u'dní'
-    return u'Už len', post
+        post = 'dní'
+    return 'Už len', post
 
 def msg_pl(n):
     if n == 1:
-        post = u'godzinę'
+        post = 'godzinę'
     elif n <= 4:
-        post = u'godziny'
+        post = 'godziny'
     else:
-        post = u'godzin'
-    return u'Dostępne za', post
+        post = 'godzin'
+    return 'Dostępne za', post
 
 def msg_pl_days(n):
     if n == 1:
-        pre = u'Pozostał tylko'
-        post = u'dzień'
+        pre = 'Pozostał tylko'
+        post = 'dzień'
     elif n <= 4:
-        pre = u'Pozostały tylko'
-        post = u'dni'
+        pre = 'Pozostały tylko'
+        post = 'dni'
     else:
-        pre = u'Pozostało tylko'
-        post = u'dni'
-    return u'Dostępne za', post
+        pre = 'Pozostało tylko'
+        post = 'dni'
+    return 'Dostępne za', post
 
 def msg_pl_conference(n):
     if n == 1:
-        post = u'godzinę'
+        post = 'godzinę'
     elif n <= 4:
-        post = u'godziny'
+        post = 'godziny'
     else:
-        post = u'godzin'
-    return u'Zaczyna się za', post
+        post = 'godzin'
+    return 'Zaczyna się za', post
 
 def msg_lt(n):
     if (n % 10 == 1) and (n != 11):
-        post = u'dienos'
+        post = 'dienos'
     else:
-        post = u'dienų'
-    return u'Pasirodys po', post
+        post = 'dienų'
+    return 'Pasirodys po', post
 
 if VERSION == "conference":
     avail = {
-        'en': u'Join\nUs!',
-        'de': u' Begleiten\nSie Uns !',
-        'ca': u'Uneix-te\na nosaltres!',
-        'sk': u'Pridajte sa!',
-        'fr': u'Rejoignez-\nnous!',
-        'uk': u'Приєднуйтеся!!',
-        'ru': u'Присоединяйся!',
-        'nl': u'Bezoek!',
-        'es': u'¡Únete a nosotros!',
-        'it': u'Unisciti a noi!',
-        'el': u'Ελάτε μαζί μας!',
-        'pl': u'Dołącz\ndo nas!',
-        'pt': u'Junte-se a nós!',
-        'pt_BR': u'Junte-se a nós!',
-        'ja': u'ご参加ください！',
-        'da': u'Vær\nmed!',
-        'nb': u'Bli\nmed!',
-        'nn': u'Bli\nmed!',
-        'lt': u'Dalyvaukite!',
-        'zh': u'加入我们！',
+        'en': 'Join\nUs!',
+        'de': ' Begleiten\nSie Uns !',
+        'ca': 'Uneix-te\na nosaltres!',
+        'sk': 'Pridajte sa!',
+        'fr': 'Rejoignez-\nnous!',
+        'uk': 'Приєднуйтеся!!',
+        'ru': 'Присоединяйся!',
+        'nl': 'Bezoek!',
+        'es': '¡Únete a nosotros!',
+        'it': 'Unisciti a noi!',
+        'el': 'Ελάτε μαζί μας!',
+        'pl': 'Dołącz\ndo nas!',
+        'pt': 'Junte-se a nós!',
+        'pt_BR': 'Junte-se a nós!',
+        'ja': 'ご参加ください！',
+        'da': 'Vær\nmed!',
+        'nb': 'Bli\nmed!',
+        'nn': 'Bli\nmed!',
+        'lt': 'Dalyvaukite!',
+        'zh': '加入我们！',
          }
 
     almost = {
-        'en': [u'Starts in', [u'hours!', u'hour!']],
-        'ca': [u'Comença d\'aquí a', [u'hores!', u'hora!']],
-        'nl': [u'Begint over', [u'uren!', u'uur']],
-        'fr': [u'Débute dans', [u'heures!', u'heure!']],
-        'de': [u'in', [u'Stunden!', u'Stunde!']],
-        'it': [u'Comincia tra', [u'ore!', u'ora!']],
-        'uk': [u'Розпочнеться через', [u'годин!', u'годину!']],
-        'ru': [u'Начнётся через', [u'часов!', u'час!']],
-        'pt': [u'Começa em', [u'horas!', u'hora!']],
-        'pt_BR': [u'Começa em', [u'horas!', u'hora!']],
-        'el': [u'Ξεκινά σε', [u'ώρα!', u'ώρες!']],
-        'es': [u'¡Empieza en', [u'horas!', u'hora!']],
-        'ja': [u'あと [N 時間] で始まります', [u'あと [N 日] で始まりま', u'に始 まります']],
-        'da': [u'Begynder om ', [u'timer!', u'time!']],
-        'nb': [u'Begynner om', [u'timer!', u'time!']],
-        'nn': [u'Begynner om', [u'timar!', u'time!']],
-        'lt': [u'Prasidės po', [u'val.!', u'val.!']],
-        'zh': [u'将在', [u'小时后开始！', u'小时后开始！']],
+        'en': ['Starts in', ['hours!', 'hour!']],
+        'ca': ['Comença d\'aquí a', ['hores!', 'hora!']],
+        'nl': ['Begint over', ['uren!', 'uur']],
+        'fr': ['Débute dans', ['heures!', 'heure!']],
+        'de': ['in', ['Stunden!', 'Stunde!']],
+        'it': ['Comincia tra', ['ore!', 'ora!']],
+        'uk': ['Розпочнеться через', ['годин!', 'годину!']],
+        'ru': ['Начнётся через', ['часов!', 'час!']],
+        'pt': ['Começa em', ['horas!', 'hora!']],
+        'pt_BR': ['Começa em', ['horas!', 'hora!']],
+        'el': ['Ξεκινά σε', ['ώρα!', 'ώρες!']],
+        'es': ['¡Empieza en', ['horas!', 'hora!']],
+        'ja': ['あと [N 時間] で始まります', ['あと [N 日] で始まりま', 'に始 まります']],
+        'da': ['Begynder om ', ['timer!', 'time!']],
+        'nb': ['Begynner om', ['timer!', 'time!']],
+        'nn': ['Begynner om', ['timar!', 'time!']],
+        'lt': ['Prasidės po', ['val.!', 'val.!']],
+        'zh': ['将在', ['小时后开始！', '小时后开始！']],
         'pl': msg_pl_conference,
          }
 else:
     avail = {
-        'en': u'Out\nnow!',
-        'de': u'Jetzt\nverfügbar!',
-        'cs': u'Nyní\ndostupné!',
-        'sk': u'Stahuj\nteraz!',
-        'fr': u'Disponible\nmaintenant!',
-        'da': u'Ude\nnu!',
-        'ru': u'Уже\nвышла',
-        'nl': u'Nu\nbeschikbaar!',
-        'fi': u'Nyt\nsaatavissa!',
-        'es': u'¡Ya\ndisponible!',
-        'it': u'Disponibile\nora!',
-        'el': u'Διαθέσιμο\nτώρα!',
-        'sv': u'Ute\nnu!',
-        'hr': u'Sad\ndostupan!',
-        'nb': u'Ute\nnå!',
-        'pt': u'Já\ndisponível!',
-        'pt_BR': u'Baixe\nagora!',
-        'hu': u'Megjelent',
-        'ro': u'Disponibil\nacum!',
-        'si': u'Zunaj\nZdaj!',
-        'tw': u'盛裝發佈！',
-        'id': u'Download\nsekarang',
-        'bg': u'довнлоад\nсега!',
-        'ja': u'好評\n提供中！',
-        'wa': u'Disponibe\ndo côp!',
-        'gl': u'Xa está\ndispoñible!',
-        'ge': u'არსებული',
-        'lt': u'Išleista!',
-        'tr': u'Çıktı!',
-        'zh': u'现已发布！',
-        'pl': u'Dostępne\nteraz!',
-        'af': u'Nou\nbeskikbaar!'
+        'en': 'Out\nnow!',
+        'de': 'Jetzt\nverfügbar!',
+        'cs': 'Nyní\ndostupné!',
+        'sk': 'Stahuj\nteraz!',
+        'fr': 'Disponible\nmaintenant!',
+        'da': 'Ude\nnu!',
+        'ru': 'Уже\nвышла',
+        'nl': 'Nu\nbeschikbaar!',
+        'fi': 'Nyt\nsaatavissa!',
+        'es': '¡Ya\ndisponible!',
+        'it': 'Disponibile\nora!',
+        'el': 'Διαθέσιμο\nτώρα!',
+        'sv': 'Ute\nnu!',
+        'hr': 'Sad\ndostupan!',
+        'nb': 'Ute\nnå!',
+        'pt': 'Já\ndisponível!',
+        'pt_BR': 'Baixe\nagora!',
+        'hu': 'Megjelent',
+        'ro': 'Disponibil\nacum!',
+        'si': 'Zunaj\nZdaj!',
+        'tw': '盛裝發佈！',
+        'id': 'Download\nsekarang',
+        'bg': 'довнлоад\nсега!',
+        'ja': '好評\n提供中！',
+        'wa': 'Disponibe\ndo côp!',
+        'gl': 'Xa está\ndispoñible!',
+        'ge': 'არსებული',
+        'lt': 'Išleista!',
+        'tr': 'Çıktı!',
+        'zh': '现已发布！',
+        'pl': 'Dostępne\nteraz!',
+        'af': 'Nou\nbeskikbaar!'
         }
 
     almost = {
-        'en': [u'Release in', [u'hours!', u'hour!']],
-        'tw': [u'即刻登場', [u'小時！', u'小時！']],
-        'fr': [u'Plus que', [u'heures!', u'heure!']],
-        'de': [u'Verfügbar in', [u'Stunden!', u'Stunde!']],
-        'it': [u'Disponibile in', [u'ore!', u'ora!']],
-        'da': [u'Udgives om', [u'timer!', u'time!']],
-        'es': [u'¡Disponible en', [u'horas!', u'hora!']],
-        'pt': [u'Disponível em', [u'horas!', u'hora!']],
-        'pt_BR': [u'Disponível em', [u'horas!', u'hora!']],
-        'lt': [u'Pasirodys po', [u'val.', u'val.']],
-        'tr': [u'', [u'saat sonra burada!', u'saat sonra burada!']],
-        'zh': [u'', [u'小时后发布！', u'小时后发布！']],
-        'af': [u'Net', [u'uur bly!', u'ure bly!']],
+        'en': ['Release in', ['hours!', 'hour!']],
+        'tw': ['即刻登場', ['小時！', '小時！']],
+        'fr': ['Plus que', ['heures!', 'heure!']],
+        'de': ['Verfügbar in', ['Stunden!', 'Stunde!']],
+        'it': ['Disponibile in', ['ore!', 'ora!']],
+        'da': ['Udgives om', ['timer!', 'time!']],
+        'es': ['¡Disponible en', ['horas!', 'hora!']],
+        'pt': ['Disponível em', ['horas!', 'hora!']],
+        'pt_BR': ['Disponível em', ['horas!', 'hora!']],
+        'lt': ['Pasirodys po', ['val.', 'val.']],
+        'tr': ['', ['saat sonra burada!', 'saat sonra burada!']],
+        'zh': ['', ['小时后发布！', '小时后发布！']],
+        'af': ['Net', ['uur bly!', 'ure bly!']],
 #        'pl': msg_pl,
         }
 
 m = {
-        'en': [u'Only', u'days to go', u'', u'day to go'],
-        'de': [u'Nur noch', u'Tage', u'Nur noch', u'Tag'],
-        'cs': [u'', u'dní do vydání'],
+        'en': ['Only', 'days to go', '', 'day to go'],
+        'de': ['Nur noch', 'Tage', 'Nur noch', 'Tag'],
+        'cs': ['', 'dní do vydání'],
         'sk': msg_sk,
-        'fr': [u'Plus que', u'jours', u"Plus qu'", u'jour'],
-        'da': [u'', u'dage tilbage'],
+        'fr': ['Plus que', 'jours', u"Plus qu'", 'jour'],
+        'da': ['', 'dage tilbage'],
         'ru': msg_ru,
-        'nl': [u'Nog', u'dagen', u'Nog', u'dag'],
-        'fi': [u'', u'päivää\njäljellä'],
-        'es': [u'Quedan', u'días', u'Queda', u'día'],
-        'it': [u'', u'giorni al via', u'', u'giorno al via'],
-        #'el': ['', u'περισσότερες\nμέρες', u'Τελευταία|Μέρα'],
-        'el': [u'Μόνο', u'μέρες ακόμη'],
-        'sv': [u'', u'dagar kvar'],
-        'hr': [u'Još', u'dana'],
-        'nb': [u'', u'dager igjen'],
-        'pt': [u'Faltam', u'dias', u'Falta', u'dia'],
-        'pt_BR': [u'Faltam', u'dias', u'Falta', u'dia'],
-        'hu': [u'Még', u'nap'],
-        'ro': [u'Încă', u'zile'],
-        'id': [u'', u'hari lagi'],
-        'bg': [u'още', u'дин', u'още', u'ден'],
-        'ja': [u'いよいよ登場！\nあと', u'日'],
-        'wa': [u'Co', u'djoûs a\nratinde', u'Co', u'djoû a ratinde'],
-        'tw': [u'倒數', u'天'],
-        'gl': [u'Dispoñible en', u'días', u'Dispoñible en', u'día'],
+        'nl': ['Nog', 'dagen', 'Nog', 'dag'],
+        'fi': ['', 'päivää\njäljellä'],
+        'es': ['Quedan', 'días', 'Queda', 'día'],
+        'it': ['', 'giorni al via', '', 'giorno al via'],
+        #'el': ['', 'περισσότερες\nμέρες', 'Τελευταία|Μέρα'],
+        'el': ['Μόνο', 'μέρες ακόμη'],
+        'sv': ['', 'dagar kvar'],
+        'hr': ['Još', 'dana'],
+        'nb': ['', 'dager igjen'],
+        'pt': ['Faltam', 'dias', 'Falta', 'dia'],
+        'pt_BR': ['Faltam', 'dias', 'Falta', 'dia'],
+        'hu': ['Még', 'nap'],
+        'ro': ['Încă', 'zile'],
+        'id': ['', 'hari lagi'],
+        'bg': ['още', 'дин', 'още', 'ден'],
+        'ja': ['いよいよ登場！\nあと', '日'],
+        'wa': ['Co', 'djoûs a\nratinde', 'Co', 'djoû a ratinde'],
+        'tw': ['倒數', '天'],
+        'gl': ['Dispoñible en', 'días', 'Dispoñible en', 'día'],
         'lt': msg_lt,
-        'tr': [u'', u'gün kaldı'],
-        'zh': [u'仅剩', u'天'],
+        'tr': ['', 'gün kaldı'],
+        'zh': ['仅剩', '天'],
         'pl': msg_pl_days,
-        'af': [u'Net', u'dae bly', u'Net', u'dag bly'],
+        'af': ['Net', 'dae bly', 'Net', 'dag bly'],
 }
 
 extra = {
         'tr': {
-            u'Linux for open minds': u'Açık fikirliler için linux',
+            'Linux for open minds': 'Açık fikirliler için linux',
         },
         'zh': {
-            u'Linux for open minds': u'Linux 献给开放的思想',
+            'Linux for open minds': 'Linux 献给开放的思想',
         },
 }
 
@@ -255,7 +255,7 @@ font_override = {
         'kr': 'Noto Sans KR',
         }
 
-font_to_replace = u'Source Sans Pro'
+font_to_replace = 'Source Sans Pro'
 default_font = 'Source Sans Pro'
 
 if len(args) >= 2:
