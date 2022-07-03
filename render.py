@@ -46,7 +46,6 @@ optionParser.add_option('-d', '--days', dest='forced_days', type='int', default=
 
 if len(options.sizes) == 0:
     options.sizes = [x[2] for x in sizes]
-    pass
 
 def msg_ru(n):
     if (n != 11) and (n % 10 == 1):
@@ -262,13 +261,11 @@ if len(args) >= 2:
     outdir = args[1]
 else:
     outdir = "../output/%s" % VERSION
-    pass
 
 if len(options.lang) > 0:
     languages = options.lang
 else:
     languages = list(m.keys()) + list(avail.keys())
-    pass
 
 if options.forced_days != None:
     days = options.forced_days
@@ -277,15 +274,13 @@ else:
     diff = (RELEASE - datetime.datetime.utcnow())
     days = diff.days
     seconds = diff.seconds
-    pass
 
 workdir = None
 
 def on_exit():
     if workdir != None and os.path.exists(workdir):
         shutil.rmtree(workdir)
-        pass
-    pass
+
 atexit.register(on_exit)
 
 workdir = tempfile.mkdtemp(prefix='countdown', suffix='tmp')
@@ -295,7 +290,6 @@ def sjoin(a, sep, b):
     r = a
     if len(a) > 0 and len(b) > 0:
         r += sep
-        pass
     r += b
     return r
 
@@ -321,7 +315,6 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
         font_repl = font_override[truelang]
     else:
         font_repl = default_font
-        pass
 
     for size in sizes:
         if not (size[2] in options.sizes):
@@ -331,7 +324,6 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
             t = "-top"
         else:
             t = None
-            pass
 
         for var in varlist:
             if template_variant == None:
@@ -344,12 +336,10 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                     template = "%s%s%s-%s.svg" % (size[3], var, t, template_variant)
                 if t == None or not os.path.exists(template):
                     template = "%s%s-%s.svg" % (size[3], var, template_variant)
-                pass
 
             if not os.path.exists(template):
                 if options.verbose:
                     print("skipping %s / %s / %s: template \"%s\" does not exist" % (lang, var, size[2], template))
-                    pass
                 if var:
                     print("Needed template \"%s\" is missing. Aborting" % (template), file=sys.stderr)
                     sys.exit(1)
@@ -359,7 +349,6 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
 
             if options.verbose:
                 print("%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile))
-                pass
 
             workfile = os.path.join(workdir, "work.svg")
             out = open(workfile, "wb")
@@ -371,14 +360,12 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 if lang in extra:
                     for s, r in extra[lang].items():
                         line = line.replace(s.encode('ascii', 'xmlcharrefreplace'), str(r).encode('ascii', 'xmlcharrefreplace'))
-                        pass
-                    pass
 
                 if font_repl != None:
                     line = line.replace(font_to_replace.encode('ascii', 'xmlcharrefreplace'), font_repl.encode('ascii', 'xmlcharrefreplace'))
-                    pass
+
                 out.write(line)
-                pass
+
             out.close()
 
             rc = call_render(workfile, outfile, size[0], size[1])
@@ -387,22 +374,15 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 shutil.copyfile(workfile, svg_outfile)
                 if options.verbose:
                     print("SVG saved as %s" % svg_outfile)
-                    pass
-                pass
 
             if rc != 0:
                 print("ERROR: call to inkscape failed for %s" % workfile, file=sys.stderr)
-            pass
-        pass
-    pass
 
 if options.verbose:
     print("days: %d" % (days))
-    pass
 
 if not os.path.exists(outdir):
     os.makedirs(outdir)
-    pass
 
 if days == 0 and seconds > 0:
     for lang in languages:
@@ -416,17 +396,14 @@ if days == 0 and seconds > 0:
         else:
             m = almost['en']
             truelang = 'en'
-            pass
+
         top = m[0]
         if hours > 1:
             post = m[1][0]
         else:
             post = m[1][1]
-            pass
 
         render(lang, truelang, "", top, text, post, post2)
-        pass
-    pass
 
 elif days <= 0:
     for lang in languages:
@@ -437,7 +414,6 @@ elif days <= 0:
             text = avail[lang]
         else:
             text = avail['en']
-            pass
 
         if lang in almost:
             m = almost[lang]
@@ -445,16 +421,12 @@ elif days <= 0:
         else:
             m = almost['en']
             truelang = 'en'
-            pass
 
         parts = text.split("\n")
         if len(parts) == 1:
             render(lang, truelang, None, parts[0], None, "", None, "outnow")
         else:
             render(lang, truelang, None, parts[0], None, parts[1], None, "outnow")
-            pass
-        pass
-    pass
 else:
     for lang, msg in m.items():
         if not lang in languages:
@@ -473,8 +445,6 @@ else:
             else:
                 pre = msg[2]
                 post = msg[3]
-                pass
-            pass
         elif len(msg) == 2:
             pre = msg[0]
             post = msg[1]
@@ -487,24 +457,19 @@ else:
                 post = None
                 text = None
                 whole = msg[2]
-                pass
-            pass
         else:
             print("unsupported msg: %s" % msg, file=sys.stderr)
             sys.exit(1)
-            pass
 
         if post != None and "\n" in post:
             parts = post.split("\n")
             post = parts[0]
             post2 = parts[1]
-            pass
 
         if pre != None and "\n" in pre:
             parts = pre.split("\n")
             pre0 = parts[0]
             pre = parts[1]
-            pass
 
         if lang in almost:
             m = almost[lang]
@@ -512,9 +477,5 @@ else:
         else:
             m = almost['en']
             truelang = 'en'
-            pass
 
         render(lang, truelang, pre0, pre, text, post, post2)
-        pass
-    pass
-
