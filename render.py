@@ -207,7 +207,7 @@ m = {
         'de': ['Nur noch', 'Tage', 'Nur noch', 'Tag'],
         'cs': ['', 'dní do vydání'],
         'sk': msg_sk,
-        'fr': ['Plus que', 'jours', u"Plus qu'", 'jour'],
+        'fr': ['Plus que', 'jours', "Plus qu'", 'jour'],
         'da': ['', 'dage tilbage'],
         'ru': msg_ru,
         'nl': ['Nog', 'dagen', 'Nog', 'dag'],
@@ -267,7 +267,7 @@ if len(options.lang) > 0:
 else:
     languages = list(m.keys()) + list(avail.keys())
 
-if options.forced_days != None:
+if options.forced_days is not None:
     days = options.forced_days
     seconds = 0
 else:
@@ -278,7 +278,7 @@ else:
 workdir = None
 
 def on_exit():
-    if workdir != None and os.path.exists(workdir):
+    if workdir is not None and os.path.exists(workdir):
         shutil.rmtree(workdir)
 
 atexit.register(on_exit)
@@ -317,24 +317,24 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
         font_repl = default_font
 
     for size in sizes:
-        if not (size[2] in options.sizes):
+        if not size[2] in options.sizes:
             continue
 
-        if y != None and len(y) > 0:
+        if y is not None and len(y) > 0:
             t = "-top"
         else:
             t = None
 
         for var in varlist:
-            if template_variant == None:
-                if t != None:
+            if template_variant is None:
+                if t is not None:
                     template = "%s%s%s.svg" % (size[3], var, t)
-                if t == None or not os.path.exists(template):
+                if t is None or not os.path.exists(template):
                     template = "%s%s.svg" % (size[3], var)
             else:
-                if t != None:
+                if t is not None:
                     template = "%s%s%s-%s.svg" % (size[3], var, t, template_variant)
-                if t == None or not os.path.exists(template):
+                if t is None or not os.path.exists(template):
                     template = "%s%s-%s.svg" % (size[3], var, template_variant)
 
             if not os.path.exists(template):
@@ -361,7 +361,7 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                     for s, r in extra[lang].items():
                         line = line.replace(s.encode('ascii', 'xmlcharrefreplace'), str(r).encode('ascii', 'xmlcharrefreplace'))
 
-                if font_repl != None:
+                if font_repl is not None:
                     line = line.replace(font_to_replace.encode('ascii', 'xmlcharrefreplace'), font_repl.encode('ascii', 'xmlcharrefreplace'))
 
                 out.write(line)
@@ -461,12 +461,12 @@ else:
             print("unsupported msg: %s" % msg, file=sys.stderr)
             sys.exit(1)
 
-        if post != None and "\n" in post:
+        if post is not None and "\n" in post:
             parts = post.split("\n")
             post = parts[0]
             post2 = parts[1]
 
-        if pre != None and "\n" in pre:
+        if pre is not None and "\n" in pre:
             parts = pre.split("\n")
             pre0 = parts[0]
             pre = parts[1]
