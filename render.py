@@ -78,13 +78,13 @@ def msg_pl(n):
 
 def msg_pl_days(n):
     if n == 1:
-        pre = 'Pozostał tylko'
+        # pre = 'Pozostał tylko'
         post = 'dzień'
     elif n <= 4:
-        pre = 'Pozostały tylko'
+        # pre = 'Pozostały tylko'
         post = 'dni'
     else:
-        pre = 'Pozostało tylko'
+        # pre = 'Pozostało tylko'
         post = 'dni'
     return 'Dostępne za', post
 
@@ -271,7 +271,7 @@ if options.forced_days is not None:
     days = options.forced_days
     seconds = 0
 else:
-    diff = (RELEASE - datetime.datetime.utcnow())
+    diff = RELEASE - datetime.datetime.utcnow()
     days = diff.days
     seconds = diff.seconds
 
@@ -310,11 +310,7 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
     ly = reduce(lambda x,y: sjoin(x, " ".encode('ascii'), y), [y, yy])
     lz = reduce(lambda x,y: sjoin(x, " ".encode('ascii'), y), [z, zz])
 
-    font_repl = None
-    if truelang in font_override:
-        font_repl = font_override[truelang]
-    else:
-        font_repl = default_font
+    font_repl = font_override.get(truelang, default_font)
 
     for size in sizes:
         if not size[2] in options.sizes:
@@ -351,22 +347,20 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
                 print("%s / %s / %s: %s -> %s" % (lang, var, size[2], template, outfile))
 
             workfile = os.path.join(workdir, "work.svg")
-            out = open(workfile, "wb")
-            for line in fileinput.FileInput(template, mode="rb"):
-                line = line.replace(b"@@", x).replace(b"@TOPC@", y).replace(b"@TOP@", yy).replace(b"@BOTTOM@", z).replace(b"@BOTTOMC@", zz)
-                line = line.replace(b"@_TOP_@", ly).replace(b"@_BOTTOM_@", lz)
-                line = line.replace(b"##.#", VERSION.encode('ascii', 'xmlcharrefreplace'))
+            with open(workfile, "wb") as out:
+                for line in fileinput.FileInput(template, mode="rb"):
+                    line = line.replace(b"@@", x).replace(b"@TOPC@", y).replace(b"@TOP@", yy).replace(b"@BOTTOM@", z).replace(b"@BOTTOMC@", zz)
+                    line = line.replace(b"@_TOP_@", ly).replace(b"@_BOTTOM_@", lz)
+                    line = line.replace(b"##.#", VERSION.encode('ascii', 'xmlcharrefreplace'))
 
-                if lang in extra:
-                    for s, r in extra[lang].items():
-                        line = line.replace(s.encode('ascii', 'xmlcharrefreplace'), str(r).encode('ascii', 'xmlcharrefreplace'))
+                    if lang in extra:
+                        for s, r in extra[lang].items():
+                            line = line.replace(s.encode('ascii', 'xmlcharrefreplace'), str(r).encode('ascii', 'xmlcharrefreplace'))
 
-                if font_repl is not None:
-                    line = line.replace(font_to_replace.encode('ascii', 'xmlcharrefreplace'), font_repl.encode('ascii', 'xmlcharrefreplace'))
+                    if font_repl is not None:
+                        line = line.replace(font_to_replace.encode('ascii', 'xmlcharrefreplace'), font_repl.encode('ascii', 'xmlcharrefreplace'))
 
-                out.write(line)
-
-            out.close()
+                    out.write(line)
 
             rc = call_render(workfile, outfile, size[0], size[1])
             if options.keep:
@@ -386,7 +380,7 @@ if not os.path.exists(outdir):
 
 if days == 0 and seconds > 0:
     for lang in languages:
-        hours = ((seconds / 3600) + 1)
+        hours = (seconds / 3600) + 1
         text = "%02d" % (hours)
         post2 = ""
 
