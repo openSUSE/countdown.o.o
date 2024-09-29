@@ -4,14 +4,15 @@
 #
 # Release countdown banner generation script
 # by Pascal Bleser <pascal.bleser@opensuse.org>
+# and other openSUSE contributors
 
 import sys
 import datetime
 import fileinput
+from cairosvg import svg2png
 from functools import reduce
 from optparse import OptionParser
 import os
-import subprocess
 import tempfile
 import shutil
 import atexit
@@ -293,14 +294,6 @@ def sjoin(a, sep, b):
     r += b
     return r
 
-def call_render(workfile, outfile, width, height):
-    # can't use rsvg as the black outline around placeholers is
-    # stored in a way only inkscape can process
-    #rc = subprocess.call(["rsvg-convert", "-w", str(width), "-h", str(height), "-f", "png", "-o", outfile, workfile])
-    rc = subprocess.call(["inkscape", "-z", "--export-png=%s" % outfile, "--export-area-page", "-w", str(width), "-h", str(height), workfile], stdout=dev_null)
-    return rc
-
-
 def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_variant=None):
     x = str(center).encode('ascii', 'xmlcharrefreplace')
     y = str(top1).encode('ascii', 'xmlcharrefreplace')
@@ -362,15 +355,12 @@ def render(lang, truelang, top1, top2, center, bottom1, bottom2, template_varian
 
                     out.write(line)
 
-            rc = call_render(workfile, outfile, size[0], size[1])
+            svg2png(url=workfile, write_to=outfile, output_width=size[0], output_height=size[1])
             if options.keep:
                 svg_outfile = "%s/%s%s.%s.svg" % (outdir, size[3], var, lang)
                 shutil.copyfile(workfile, svg_outfile)
                 if options.verbose:
                     print("SVG saved as %s" % svg_outfile)
-
-            if rc != 0:
-                print("ERROR: call to inkscape failed for %s" % workfile, file=sys.stderr)
 
 if options.verbose:
     print("days: %d" % (days))
