@@ -1,21 +1,17 @@
 #!/bin/bash
-REMOTE_HOST="counter.o.o"
 BASEDIR="/home/counter.opensuse.org/svg"
 LOCAL="/home/counter.opensuse.org/output"
 BINARY_LOCATION="https://raw.github.com/openSUSE/artwork/master/Marketing%20Materials/Events/openSUSE%20Conference/2013-oS-Conference/countdown-banner"
 BINARY_FINAL_DATE=$(date -d "2014-11-04" +%s)
-REMOTE_LOCATION="rsync://community.infra.opensuse.org/countdown"
 
 set -e
 
 VERBOSE=
 RENDER=
-REMOTE=
 GIT_PULL=
 while getopts 'vREBG' v; do
     case $v in
         v) VERBOSE=1;;
-        R) REMOTE=1;;
         E) RENDER=1;;
         B) BINARY=1;;
         G) GIT_PULL=1;;
@@ -88,13 +84,4 @@ if [ -n "$BINARY" ]; then
             done
         done
     done
-fi
-
-if [ -n "$REMOTE" ]; then
-    RSFLAGS=""
-    if [ -e ~/.rsync_pass ] ; then
-      source ~/.rsync_pass
-    fi
-    [ -n "$VERBOSE" ] && RSFLAGS="$RSFLAGS -v"
-    rsync -ap --delete-after $RSFLAGS "$LOCAL/" "$REMOTE_LOCATION/"
 fi
