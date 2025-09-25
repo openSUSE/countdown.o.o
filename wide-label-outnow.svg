@@ -1,11 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100" preserveAspectRatio ="xMinYMin slice">
-<rect width="600" height="100" fill="#173f4f"/>
-<path style="fill:#ffffff" d="M 22.335014,64.49014 60.839022,34.52441 22.587174,5.214296 -15.918362,35.180026 Z" />
-<path style="fill:#ffffff" d="M 22.368636,75.74258 -20.215772,43.111592 -30.429,51.059968 22.999798,92 76.015972,50.740566 65.171582,42.433052 Z" />
-<text xml:space="preserve" style="font-size:21.33333333px;text-align:start;text-anchor:start;fill:#ffffff" x="84" y="36"><tspan x="84" y="36" style="font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff">openSUSE</tspan></text>
-<text xml:space="preserve" style="font-size:48px;text-align:start;text-anchor:start" x="76" y="80"><tspan style="stroke-width:2" x="76" y="100" /></text>
-<text xml:space="preserve" style="font-size:21.33333333px;text-align:center;text-anchor:middle" x="76" y="80"><tspan style="stroke-width:2" x="76" y="100" /></text>
-<text xml:space="preserve" style="font-size:21.33333333px;text-align:start;text-anchor:start;fill:#ffffff" x="82" y="80"><tspan x="82" y="80" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:condensed;font-size:48px;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, Light Condensed';fill:#ffffff">Leap ##.#</tspan></text>
-<text y="50" x="529" style="text-align:center;text-anchor:middle" xml:space="preserve"><tspan style="font-size:10.66666698px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#f9f9f9" y="50" x="529">@TOP@</tspan></text>
-<text y="62" x="529" style="text-align:center;text-anchor:middle" xml:space="preserve"><tspan style="font-size:10.66666666px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#ffffff;font-weight:bold" y="62" x="529">@BOTTOM@</tspan></text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 600 100"
+   preserveAspectRatio="xMinYMin slice"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="wide-label-outnow.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.0266667"
+     inkscape:cx="171.71053"
+     inkscape:cy="49.835526"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <rect
+     width="600"
+     height="100"
+     fill="#173f4f"
+     id="rect1" />
+  <text
+     xml:space="preserve"
+     style="font-size:21.33333333px;text-align:start;text-anchor:start;fill:#ffffff"
+     x="84"
+     y="36"
+     id="text2"><tspan
+       x="84"
+       y="36"
+       style="font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, ';fill:#ffffff"
+       id="tspan2">openSUSE</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:48px;text-align:start;text-anchor:start"
+     x="76"
+     y="80"
+     id="text3"><tspan
+       style="stroke-width:2"
+       x="76"
+       y="100"
+       id="tspan3" /></text>
+  <text
+     xml:space="preserve"
+     style="font-size:21.33333333px;text-align:center;text-anchor:middle"
+     x="76"
+     y="80"
+     id="text4"><tspan
+       style="stroke-width:2"
+       x="76"
+       y="100"
+       id="tspan4" /></text>
+  <text
+     xml:space="preserve"
+     style="font-size:21.33333333px;text-align:start;text-anchor:start;fill:#ffffff"
+     x="82"
+     y="80"
+     id="text5"><tspan
+       x="82"
+       y="80"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:condensed;font-size:48px;font-family:'Open Sans Condensed';-inkscape-font-specification:'Open Sans Condensed, Light Condensed';fill:#ffffff"
+       id="tspan5">Leap ##.#</tspan></text>
+  <text
+     y="50"
+     x="529"
+     style="text-align:center;text-anchor:middle"
+     xml:space="preserve"
+     id="text6"><tspan
+       style="font-size:10.66666698px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#f9f9f9"
+       y="50"
+       x="529"
+       id="tspan6">@TOP@</tspan></text>
+  <text
+     y="62"
+     x="529"
+     style="text-align:center;text-anchor:middle"
+     xml:space="preserve"
+     id="text7"><tspan
+       style="font-size:10.66666666px;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#ffffff;font-weight:bold"
+       y="62"
+       x="529"
+       id="tspan7">@BOTTOM@</tspan></text>
+  <path
+     d="m 22.894027,8.9111549 a 2.6717032,2.6717032 0 0 0 -1.763489,0.772213 L -8.2550632,39.068971 a 2.6717032,2.6717032 0 0 0 0,3.777387 L 21.130538,72.231959 a 2.6717032,2.6717032 0 0 0 3.777382,0 L 54.293521,42.846358 a 2.6717032,2.6717032 0 0 0 0,-3.777387 L 24.90792,9.6833679 A 2.6717032,2.6717032 0 0 0 22.893884,8.9111549 Z M 23.019273,15.349626 48.627503,40.957845 23.019284,66.566059 -2.5889292,40.957845 Z M -9.0377352,56.984574 v 2.671422 a 2.671418,2.671418 0 0 0 0.782693,1.88876 L 21.130559,90.930349 a 2.6717032,2.6717032 0 0 0 3.777382,0 L 54.29354,61.544756 a 2.671418,2.671418 0 0 0 0.782618,-1.88876 2.671418,2.671418 0 0 0 0,-0.125169 v -2.546196 h -2.67141 a 2.671418,2.671418 0 0 0 -1.888737,0.782663 L 23.019284,85.264009 -4.4774482,57.767275 a 2.671418,2.671418 0 0 0 -1.888796,-0.772229 v -0.0096 z"
+     color="#000000"
+     color-rendering="auto"
+     dominant-baseline="auto"
+     fill="#fbc75d"
+     image-rendering="auto"
+     shape-rendering="auto"
+     solid-color="#000000"
+     stop-color="#000000"
+     style="font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;isolation:auto;mix-blend-mode:normal;fill:#ffffff;stroke-width:0.356188"
+     id="path1-3" />
 </svg>
