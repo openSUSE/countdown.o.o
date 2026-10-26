@@ -21,6 +21,7 @@ import atexit
 # VERSION = "13.2"
 # VERSION = "conference"
 VERSION = "16.1"
+# IMPORTANT: the link target won't change automatically. When changing VERSION, also update redirect_target in pillar/role/countdown.sls in the Heroes salt repo.
 
 # UTC timestamp!
 RELEASE = datetime.datetime(2026, 11, 3, 12, 0, 0)
